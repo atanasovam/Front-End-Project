@@ -51,6 +51,9 @@ opacity: 0.6;
 .profile-pic{
    border-radius: 50%; 
 }
+#logged{
+    font-size: 50%;
+}
 .user-intro {
     text-align: center;
     padding-top: 70px;
