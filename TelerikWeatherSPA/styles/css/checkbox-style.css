@@ -42,3 +42,7 @@
     background: inherit;
     left: 20px;
 }
+li.list-group-item {
+    background: whitesmoke;
+    opacity: 0.7;
+}
