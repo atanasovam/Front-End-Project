@@ -1,7 +1,7 @@
 const showProfilePage = function () {
-    $('.visited-dest').css('display','none');
-    $('.next-trip-places').css('display','none');
-    $('.select-dest-type')  .css('display','none');
+    $('.visited-dest').css('display', 'none');
+    $('.next-trip-places').css('display', 'none');
+    $('.select-dest-type').css('display', 'none');
 
     $('.index').css('display', 'none');
     $('#profile-page').css('display', 'inline');
@@ -35,3 +35,4 @@ $('#sign-up').on('click', login);
 $('#sign-out').on('click', logout);
 $('#logged').on('click', showProfilePage);
 $('.scroll').on('click', hideProfilePage);
+$('#top').on('click', hideProfilePage);
