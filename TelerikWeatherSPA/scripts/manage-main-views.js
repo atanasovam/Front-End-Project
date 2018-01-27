@@ -1,4 +1,8 @@
 const showProfilePage = function () {
+    $('.visited-dest').css('display','none');
+    $('.next-trip-places').css('display','none');
+    $('.select-dest-type')  .css('display','none');
+
     $('.index').css('display', 'none');
     $('#profile-page').css('display', 'inline');
     $('.visited-dest .next-trip-places .select-dest-type').css('display', 'none');
@@ -14,6 +18,7 @@ const hideProfilePage = function () {
 // LOGIN
 const login = function () {
     showProfilePage();
+
     $('#logged').text('Hello, user!');
     $('#sign-up').text('');
     $('#sign-out').text('Sign out');

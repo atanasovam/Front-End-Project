@@ -3,33 +3,39 @@ const visitedDest = $('.visited-dest');
 const nextTripDest = $('.next-trip-places');
 const selectDestType = $('.select-dest-type');
 
-const show = function (elementsArr) {
-    console.log(elementsArr)
-    debugger
-    elementsArr.forEach((el) => {
-        el.css('display', 'inline');
-    });
+const show = function (el) {
+    el.css('display', 'inline');
 };
-const hide = function (elementsArr) {
-    elementsArr.forEach((el) => {
-        el.css('display', 'none');
-    });
+const hide = function (el) {
+    el.css('display', 'none');
 };
 
 $('#fav-places').on('click', function () {
-    // hide([visitedDest, nextTripDest, selectDestType]);
-    // show(favPlaces);
+    hide(visitedDest);
+    hide(nextTripDest);
+    hide(selectDestType);
+
+    show(favPlaces);
 });
 $('#visited-dest').on('click', function () {
-    hide([favPlaces, nextTripDest, selectDestType]);
+    hide(favPlaces);
+    hide(nextTripDest);
+    hide(selectDestType);
+
     show(visitedDest);
 });
 $('#next-trip-places').on('click', function () {
-    // hide([favPlaces, visitedDest, selectDestType]);
-    // show(nextTripDest);
+    hide(favPlaces);
+    hide(visitedDest);
+    hide(selectDestType);
+
+    show(nextTripDest);
 });
 $('#select-dest-type').on('click', function () {
-    // hide([favPlaces, visitedDest, nextTripDest]);
-    // show(selectDestType);
+    hide(favPlaces);
+    hide(visitedDest);
+    hide(nextTripDest);
+
+    show(selectDestType);
 });
 
