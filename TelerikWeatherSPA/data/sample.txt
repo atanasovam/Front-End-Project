@@ -1,0 +1,5 @@
+name: New York
+temperatureC: 20
+rain: no
+sunny: yes
+category: historical

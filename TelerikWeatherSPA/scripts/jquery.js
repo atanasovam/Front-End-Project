@@ -4,4 +4,6 @@ jQuery(document).ready(function ($) {
         $("html, body").animate({ scrollTop: $(this.hash).offset().top - $("#navbar")[0].offsetHeight }, 900);
     });
     $('#profile-page').css('display','none');
+
 });
+
