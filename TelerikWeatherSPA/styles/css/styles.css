@@ -115,3 +115,10 @@ ol {
 .hidden {
     display: none !important;
 }
+
+
+/* Pop-up */
+
+.modal-body {
+    top: 100px;
+}
