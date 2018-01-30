@@ -6,6 +6,9 @@
     font-weight: 900;
 }
 
+
+/* Navbar */
+
 #navbar {
     /* font-family: 'Roboto', sans-serif;  */
     font-family: Helvetica;
@@ -36,14 +39,18 @@
     padding: 10px;
 }
 
+
+/*  Body */
+
 body {
     position: relative;
+    background-image: url(../images/sky.jpg);
+    background-attachment: fixed;
 }
 
 body::after {
     pointer-events: none;
     content: "";
-    background-image: url(../images/background.jpg);
     top: 0;
     left: 0;
     bottom: 0;
@@ -53,6 +60,9 @@ body::after {
     z-index: -1;
     opacity: 0.6;
 }
+
+
+/* Profile page */
 
 .profile-pic {
     border-radius: 50%;
@@ -68,4 +78,40 @@ body::after {
         text-align: center;
         padding-top: 290px;
     }
+}
+
+
+/* Profile table */
+
+.nav-tabs.nav-justified>li>a {
+    color: black !important;
+}
+
+.fav-places,
+.visited-dest,
+.next-trip-places {
+    text-align: center;
+    color: black;
+}
+
+.select-profile-choises {
+    padding-top: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-table {
+        margin-top: 9px;
+    }
+}
+
+
+/*  */
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+.hidden {
+    display: none !important;
 }

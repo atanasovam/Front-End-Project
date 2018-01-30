@@ -36,7 +36,7 @@ var openDB = (function() {
       var db = [];
     
       databaseOpen(function(data) {
-        alert("The txt file has been openned successfully");
+        // alert("The txt file has been openned successfully");
         db.push(data);
       });
     
@@ -51,7 +51,7 @@ var openDB = (function() {
     
       function databaseError(e) {
         //console.error('An IndexedDB error has occurred', e);
-        alert("Couldn't open file")
+        // alert("Couldn't open file")
       }
     return {
         loadData: db,
@@ -89,7 +89,7 @@ var destination = (function (dataCities) {
 })(openDB.loadData);
 
 console.log(destination.getDataCity[0])
-alert(destination.getDataCity()[0])
+// alert(destination.getDataCity()[0])
 
 jQuery(document).ready(function ($) {
 
