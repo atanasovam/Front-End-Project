@@ -1,7 +1,5 @@
 
 var fs = require('fs');
-// var fs = window.writeFileSync
-// var path = require('path')
 
 
 var destination = (function () {
@@ -55,14 +53,6 @@ var destination = (function () {
 
 })();
 
-// jQuery(document).ready(function ($) {
-//     $("#submit").on('click', function() {
-//         var myText = $('#name')
-//         alert(myText)
-//         // console.log(myText)
-//         alert("e")
-//     });
-// // });
 
 destination.setName("DestinationName") 
 destination.setCountry("Country")
@@ -77,11 +67,4 @@ var data = JSON.stringify(cityData);
 var nameString = destination.getAllData().name.trim() + "";
 var folderName = './Front-End-Project/TelerikWeatherSpa/data/'
 var fileName = 'default-file' + '.json'
-
-// //var myPath = path.join( './Front-End-Project/TelerikWeatherSpa/data/', fileName)
 fs.writeFileSync('./Front-End-Project/TelerikWeatherSpa/data/' + fileName, data);  
-
-// var obj = {a: 123, b: "4 5 6"};
-// var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-
-// $('<a href="data:' + data + '" download="data.json">download JSON</a>').appendTo('#partTwo');

@@ -76,33 +76,17 @@
         
         <div id="partTwo" class="col-xs-12" style="height:500px;">
             <p>Second part</p>
-            <!-- 
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="country">Country</label>
-                        </div>
-                        <div class="col-75">
-                          <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="subject">Subject</label>
-                        </div>
-                        <div class="col-75">
-                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <input type="submit" value="Submit">
-                      </div>
-                    </form>
-                  </div> -->
-            <p><div id = "data"> </div></p>
+        <div class= "row" >
+            <div id="photo" class="col-xs-4"> </div>
+            <div id="city-info" class="col-xs-4"> </div>
+            <div id="top-places" class="col-xs-4"> </div>
+        </div>
+        <div class= "row" >
+                <div id="city-data" class="col-xs-6"> </div>
+                <div id="calendar" class="col-xs-4"> </div>
+               
+        </div>
+            
         </div>
        
         <div id="about-part" class="col-xs-12" style="height:500px;">
@@ -190,9 +174,12 @@
     </div>
 
     <script src="../scripts/jquery.js"></script>
-    <script src = "../scripts/database/data-base-save-json-admin.js"></script>
-    <script src="../scripts/manage-main-views.js"></script>
+    <!-- <script src = "../scripts/database/pass-to-data.js"></script> -->
+    <script src = "../scripts/database/data-base-load-json.js"></script>
+    <!-- <script src = "../scripts/database/data-base-save-json-admin.js"></script> --> -->
     <script src="../scripts/manage-admin-views.js"></script>
+    <script src="../scripts/manage-main-views.js"></script>
+    <!-- <script src="../scripts/manage-admin-views.js"></script> -->
     <script src="../scripts/manage-profile-table.js"></script>
 </body>
 

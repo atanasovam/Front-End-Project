@@ -1,6 +1,5 @@
-// name = "London"
-var myDB = (function (name) {
-    console.log('../data/'+name+'.json')
+name = "Berlin"
+var myDB = (function () {
     var dataFile = [];
         $.ajax({
             url: '../data/'+name+'.json',
@@ -30,33 +29,41 @@ var myDB = (function (name) {
         }
     }
    
-});
+})(name);
 
-var openDB = (function(name) {
-        console.log(name)
+
+var openDB = (function() {
+  
       var db = [];
     
       databaseOpen(function(data) {
-        alert("The json file has been opened successfully");
+        alert("The json file has been openned successfully");
         db.push(data);
       });
     
       function databaseOpen(callback) {
-        myDB(name).getError ? databaseError("Err") : callback(myDB(name).getData);
+
+        //var request = indexedDB.open('todos', version);        
+        //request.onsuccess = function(e) {
+          //db = e.target.result;
+        myDB.getError ? databaseError("Err") : callback(myDB.getData);
+
       }
     
       function databaseError(e) {
+        //console.error('An IndexedDB error has occurred', e);
         alert("Couldn't open file")
       }
     return {
         loadData: db,
     }
-});
+}());
     
-var destination = (function (name) {
-    console.log(name)
-    var dataCities = openDB(name).loadData
-    console.log(dataCities)
+console.log(openDB.loadData)
+
+
+
+var destination = (function (dataCities) {
      var data = dataCities[0];
      console.log(data)
      // privates
@@ -71,10 +78,10 @@ var destination = (function (name) {
      var currentTemperature;
 
      return {
-
+        
        getDataCity:  function() {
            //console.log("data" + data[0])
-        var readyData = jQuery.parseJSON(JSON.stringify(data))
+           var readyData = jQuery.parseJSON(JSON.stringify(data))
         return readyData;
       },
        getName: function() {
@@ -82,4 +89,13 @@ var destination = (function (name) {
        }
 
     };
-});
+})(openDB.loadData);
+
+alert(destination.getDataCity().name+Date.now())
+
+// jQuery(document).ready(function ($) {
+
+
+//     alert(destination.getDataCity().name)
+// });
+
