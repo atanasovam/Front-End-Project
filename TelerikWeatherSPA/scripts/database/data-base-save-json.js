@@ -42,9 +42,9 @@ var destination = (function () {
 
 })();
 
-destination.setName("London") 
-destination.setCountry("England")
-destination.setId(2);
+destination.setName("Berlin") 
+destination.setCountry("France")
+destination.setId(3);
 destination.setTemperatureC(10)
 destination.addTemperatureHistorical(10, 1995)
 
@@ -52,7 +52,6 @@ cityData = destination.getAllData()
 console.log(destination.getAllData())
 var data = JSON.stringify(cityData);  
 var nameString = destination.getAllData().name.trim() + ""
-
-console.log(nameString)
-fs.writeFileSync('./Front-End-Project/TelerikWeatherSpa/data/'+
-+ nameString + '.json', data);  
+var folderName = './Front-End-Project/TelerikWeatherSpa/data/'
+var fileName = folderName + nameString + '.json'
+fs.writeFileSync(fileName, data);  

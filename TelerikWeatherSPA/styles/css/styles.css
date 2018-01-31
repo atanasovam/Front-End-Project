@@ -121,3 +121,13 @@ ol {
     padding-top: 150px;
     display: block;
 }
+}
+
+.max-width-100-height-auto {
+    max-width: 100%;
+    height: auto;
+}
+
+.container, .row {
+    margin: 15px 0px;
+}

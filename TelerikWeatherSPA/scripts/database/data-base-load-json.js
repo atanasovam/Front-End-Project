@@ -1,3 +1,4 @@
+name = "London"
 var myDB = (function () {
     var dataFile = [];
         $.ajax({
@@ -36,7 +37,7 @@ var openDB = (function() {
       var db = [];
     
       databaseOpen(function(data) {
-        alert("The txt file has been openned successfully");
+        alert("The json file has been openned successfully");
         db.push(data);
       });
     
@@ -79,7 +80,9 @@ var destination = (function (dataCities) {
      return {
         
        getDataCity:  function() {
-        return data
+           //console.log("data" + data[0])
+           var readyData = jQuery.parseJSON(JSON.stringify(data))
+        return readyData;
       },
        getName: function() {
          return name
@@ -88,12 +91,15 @@ var destination = (function (dataCities) {
     };
 })(openDB.loadData);
 
-console.log(destination.getDataCity[0])
-alert(destination.getDataCity()[0])
+alert(destination.getDataCity().name)
 
 jQuery(document).ready(function ($) {
+   for(var k in destination.getDataCity())  {
+       
+       console.log(k + destination.getDataCity()[k])
+   }
 
-    $('#data').text(destination.getDataCity[0])
+    $('#data').text(destination.getDataCity().currentTemperature)
 
 });
 

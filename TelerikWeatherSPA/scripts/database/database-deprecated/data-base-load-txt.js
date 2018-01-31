@@ -19,7 +19,6 @@ var myDB = (function () {
         return {
             getError: dataFile[0].error,
             getData: dataFile[0].sampleData,
-
         }
     } else {
         return {
