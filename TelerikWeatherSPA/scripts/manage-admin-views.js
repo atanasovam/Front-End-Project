@@ -1,17 +1,15 @@
-var adminTable = document.createElement("div");
+var adminTable = $("<div/>");
+
 $(adminTable).addClass("container")
-            .appendTo($("#admin"))
-            .html("Add Custom Destination below")
+            .html("Add Custom Destination below");
 
 
-var form = document.createElement("div");
+var form = $("<div/>");
+
 $(form).appendTo(adminTable)
-        .attr("id", "form")
+        .attr("id", "form");
 
-// <div>
-//     <input type="submit" name="g" value="Submit" id="g">
-//   </div>
- var  button = document.createElement('button');
+ var  button = $('<button/>');
         $(button).appendTo(adminTable)
                 .attr("id", "form-button")
                 .attr('type', 'button')
@@ -22,29 +20,26 @@ $(form).appendTo(adminTable)
     $(button).on('click', function(event){
         alert("R")
        console.log($(form).submit().serializeArray() )
-
     })
-//                 // .css('padding-top', 'px')
-//     console.log($(form).last().offset().top)
 
 var inputElement = function(inputField, checkbox) {
-    var rowPart = document.createElement("div")
+    var rowPart = $("<div/>")
     $(rowPart).addClass("row")
             .appendTo(form);
-    var colPart = document.createElement("div")
+    var colPart = $("<div/>")
     $(colPart).addClass("col-25")
                 .appendTo(rowPart)
-     var labelPart = document.createElement("label");
+     var labelPart = $("<label/>");
      $(labelPart).html(inputField)
                 .attr('for', inputField)
                 .appendTo(colPart)
-    var colPartTwo = document.createElement("div")
+    var colPartTwo = $("<div/>")
 
     $(colPartTwo).addClass("col-75")
             .appendTo(rowPart)
             .before(colPart)
 
-    var inputPart = document.createElement("input")
+    var inputPart = $("<input/>")
     $(inputPart).attr('id', inputField)
                 .attr('name', inputField)
                 .appendTo(colPartTwo)
@@ -60,6 +55,7 @@ var inputElement = function(inputField, checkbox) {
     return
 }
 
+$(adminTable).appendTo($("#admin"));
 
 name = "default-file"
 var myDB = (function () {
