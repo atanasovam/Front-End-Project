@@ -2,39 +2,68 @@
 (function () {
     var createCityInfoBox = function (cityCurrClimat) {
 
-        var  $cityInfo = $("<div/>")
-        .addClass("container")
-        .append(
-            $("<p/>")
-                .addClass("temperature")
+        var $cityInfo = $("<div/>")
+            .addClass("container")
+            .append(
+                $("<p/>")
+                .addClass("temperature col-xs-6")
             )
             .append(
                 $("<p/>")
-                    .addClass("humidity")
-                )
+                .addClass("wind col-xs-6")
+            )
             .append(
                 $("<p/>")
-                    .addClass("weather")
-                )
-                .append(
-                    $("<img/>")
-                );
+                .addClass("humidity col-xs-6")
+            )
+            .append(
+                $("<p/>")
+                .addClass("direct col-xs-6")
+            )
+            .append(
+                $("<p/>")
+                .addClass("pressure col-xs-6")
+            )
+            .append(
+                $("<p/>")
+                .addClass("cloud col-xs-6")
+            )
+            .append(
+                $("<p/>")
+                .addClass("weather col-xs-6")
+            )
+            .append(
+                $("<p/>")
+                .addClass("desc col-xs-6")
+            )
+            .append(
+                $("<img/>")
+            );
 
         (function () {
-          //  var info = JSON.parse(cityCurrClimat);
-            
-            + cityCurrClimat["list"][0]["weather"][0]["icon"] + ".jpg";
+            //  var info = JSON.parse(cityCurrClimat);
+
+            +cityCurrClimat["list"][0]["weather"][0]["icon"] + ".jpg";
             $cityInfo.find(".temperature")
                 .html("Temperature: " + cityCurrClimat["list"][0]["main"]["temp_kf"] + "&deg;C");
             $cityInfo.find(".humidity")
                 .html("Humidity: " + cityCurrClimat["list"][0]["main"]["humidity"] + "%");
             $cityInfo.find(".weather")
-                .html("Description: " + cityCurrClimat["list"][0]["weather"][0]["main"]);
+                .html("Weather: " + cityCurrClimat["list"][0]["weather"][0]["main"]);
             $cityInfo.find("img")
-             .attr("src", "../../styles/images/"+
-                cityCurrClimat["list"][0]["weather"][0]["icon"] + ".jpg");
-
-           })();
+                .attr("src", "../../styles/images/" +
+                    cityCurrClimat["list"][0]["weather"][0]["icon"] + ".png");
+            $cityInfo.find(".pressure")
+                .html("Pressure: " + cityCurrClimat["list"][0]["main"]["pressure"] + " hPa");
+            $cityInfo.find(".wind")
+                .html("Wind speed: " + cityCurrClimat["list"][0]["wind"]["speed"] + " m/s");
+            $cityInfo.find(".direct")
+                .html("Wind direction: " + cityCurrClimat["list"][0]["wind"]["deg"] + " degrees");
+                $cityInfo.find(".cloud")
+                .html("Cloudiness: " + cityCurrClimat["list"][0]["clouds"]["all"] + "%");
+                $cityInfo.find(".desc")
+                .html("Description: " + cityCurrClimat["list"][0]["weather"][0]["description"]);
+        })();
 
         return $cityInfo;
     };
@@ -1154,7 +1183,7 @@
                 "country": "BG"
             }
         };
-       
+
         (function () {
             var $cityInfoBox = createCityInfoBox(currJSON);
             $("#curr-weather").html($cityInfoBox);
