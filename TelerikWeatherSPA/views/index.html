@@ -21,13 +21,22 @@
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
      <!--  -->
+     <script src="../scripts/jquery.js"></script>
+     <script src = "../scripts/database/data-base-save-json-admin.js"></script>
+     <script src="../scripts/manage-main-views.js"></script>
+   
+     <script src="../scripts/manage-profile-table.js"></script>
+     <!-- Functionality -->
+    
+    <script src="../scripts/functionality/load-city.js"></script>
+    
+    <!--<script src="../scripts/functionality/load-history.js"></script>  -->
     <title>Title of the document</title>
 </head>
 
 <body>
+    <div type="text" id="result">
 
-    <div type = "text" id = "result">
-            
     </div>
     <div class="sticky-top">
         <div class="nav navbar-collapse" id="navbar">
@@ -41,7 +50,7 @@
                     <div class="col-sm-9">
                         <div class="col-sm-12">
                             <div class="col-sm-2">
-                                <a class="scroll" href="#partOne"> Part One </a>
+                                <a class="scroll" href="#partOne">Part One</a>
                             </div>
                             <div class="col-sm-2">
                                 <a class="scroll" href="#partTwo">Part Two</a>
@@ -53,7 +62,7 @@
                                 <a class="scroll" href="#footer">Contact Us</a>
                             </div>
                             <div class="col-sm-2">
-                                <a id="logged"></a>
+                                <a id="logged" href="#"></a>
                             </div>
                             <div class="col-sm-2">
                                 <button type="button" class="btn btn-default">
@@ -68,38 +77,51 @@
         </div>
     </div>
 
-    <div class="index">
-        <div id="top" class="col-xs-12" style="height:500px;"></div>
-        <div id="partOne" class="col-xs-12" style="height:500px;">
-            <p>First part</p>
+    <div class="index container">
+
+        <div id="top" class="row align-items-start" style="height:475px;">
+            <div id="slideshow" class="col-xs-12" style="height:450px;"> </div>
         </div>
-        
-        <div id="partTwo" class="col-xs-12" style="height:500px;">
+        <div class="col-xs-12" style="height:500px;"></div>
+        <div id="partTwo" class="col-xs-12" style="height:100px;">
             <p>Second part</p>
-        <div class= "row" >
+            <p>
+                <div id="data"> </div>
+            </p>
+        </div>
+
+
+        <div id="partOne" class="row align-items-center">
+            <div id="map" class="col-xs-6" style="height:600px;">
+                <img class="max-width-100-height-auto" src="../styles/images/cities/map.jpg">
+            </div>
+            <div id="curr-weather" class="col-xs-6" style="height:500px;">
+            </div>
+        </div>
+
+        <div id="partTwo" class="row align-items-center" style="height:100px;">
             <div id="photo" class="col-xs-4"> </div>
             <div id="city-info" class="col-xs-4"> </div>
             <div id="top-places" class="col-xs-4"> </div>
         </div>
-        <div class= "row" >
-                <div id="city-data" class="col-xs-6"> </div>
-                <div id="calendar" class="col-xs-4"> </div>
-               
+        
+        <div class="container">
+            <div class="row" style="height:500px;"></div>
+            <div id="about-part" class="row" style="height:100px;">
+                <p>This project - blah blah blah</p>
+            </div>
         </div>
-            
+        <div class="col-xs-12" style="height:500px;"></div>
+        <div class="container">
+            <div id="footer" class="row" style="height:100px;">
+                <p>Contact us</p>
+            </div>
+            <div id = "admin" class="row align-items-center"> </div>
         </div>
-       
-        <div id="about-part" class="col-xs-12" style="height:500px;">
-            <p>This project - blah blah blah</p>
-        </div>
-        <!-- <a class="scroll" href= "#partTwo">Part Two</a> -->
 
-        <div id="footer" class="col-xs-12" style="height:100px;">
-            <p>Contact us</p>
-        </div>
     </div>
 
-    <div id="profile-page">
+    <div class="profile-page">
         <div class="user-intro">
             <img src="../styles/images/profile.png" class="profile-pic">
             <h3 class="media-heading">Username</h3>
@@ -173,13 +195,29 @@
         <!-- TODO profile page -->
     </div>
 
+    <div class="log-in">
+        <div class="col-sm-6 col-sm-offset-3">
+            <form role="form">
+                <div class="form-group">
+                    <label for="email">
+                        <span class="glyphicon glyphicon-user"></span>E-mail</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <span class="glyphicon glyphicon-eye-open form-login"></span>Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <button type="submit" id="log-user" class="btn btn-default btn-success btn-block">
+                    <span class="glyphicon glyphicon-off form-login"></span>Login</button>
+            </form>
+        </div>
+    </div>
+
+
     <script src="../scripts/jquery.js"></script>
-    <!-- <script src = "../scripts/database/pass-to-data.js"></script> -->
-    <script src = "../scripts/database/data-base-load-json.js"></script>
-    <!-- <script src = "../scripts/database/data-base-save-json-admin.js"></script> --> -->
-    <script src="../scripts/manage-admin-views.js"></script>
+    <!-- <script src = "../scripts/database/data-base-load-txt.js"></script> -->
     <script src="../scripts/manage-main-views.js"></script>
-    <!-- <script src="../scripts/manage-admin-views.js"></script> -->
     <script src="../scripts/manage-profile-table.js"></script>
 </body>
 

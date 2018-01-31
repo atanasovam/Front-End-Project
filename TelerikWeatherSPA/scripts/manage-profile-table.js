@@ -4,10 +4,10 @@ const nextTripDest = $('.next-trip-places');
 const selectDestType = $('.select-dest-type');
 
 const show = function (el) {
-    el.css('display', 'inline');
+    el.removeClass('hidden');
 };
 const hide = function (el) {
-    el.css('display', 'none');
+    el.addClass('hidden');
 };
 
 $('#fav-places').on('click', function () {
