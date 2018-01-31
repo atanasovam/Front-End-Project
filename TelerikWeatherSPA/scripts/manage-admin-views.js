@@ -1,30 +1,47 @@
 var adminTable = $("<div/>");
 
 $(adminTable).addClass("container")
-            .html("Add Custom Destination below");
+            .html("Add Custom Destination below")
 
-
-var form = $("<div/>");
+var form = $("<form/>");
 
 $(form).appendTo(adminTable)
         .attr("id", "form");
 
- var  button = $('<button/>');
-        $(button).appendTo(adminTable)
-                .attr("id", "form-button")
-                .attr('type', 'button')
-                .before(form)
+var buttonDiv = $("<div/>");
+// $(buttonDiv).offset({top: $(form).last().offset().top, left:$(form).offset().left})
+$(buttonDiv).appendTo(adminTable)
+            .attr("align", "left")
+
+var  button = $('<button/>');
+$(button).appendTo(buttonDiv)
+        .attr("id", "form-button")
+        .attr('type', 'button')
+        //.before(form)
+        .addClass('btn btn-default')
+        .html('Compile File')
+        // .offset({top: $(form).last().offset().top + 30, left:$(form).offset().left})
+var buttonDownload = $('<a/>');
+$(buttonDownload).appendTo(buttonDiv)
+                 .attr("id", "download-button")
                 .addClass('btn btn-default')
-                .html('Compile File')
-                .offset({top: $(form).last().offset().top + 30, left:$(form).offset().left})
-    $(button).on('click', function(event){
-        alert("R")
-       console.log($(form).submit().serializeArray() )
-    })
+                .html('Download');
+jQuery.fn.extend({
+    disable: function(state) {
+        return this.each(function() {
+            var $this = $(this);
+            $this.toggleClass('disabled', state);
+        });
+    }
+});
+
+$(buttonDownload).disable(true);
+        
 
 var inputElement = function(inputField, checkbox) {
     var rowPart = $("<div/>")
     $(rowPart).addClass("row")
+            .attr("style","margin-left:0px;")
             .appendTo(form);
     var colPart = $("<div/>")
     $(colPart).addClass("col-25")
@@ -52,40 +69,20 @@ var inputElement = function(inputField, checkbox) {
     }
       return
 }
+$(adminTable).appendTo( $("#admin"));
 
-$(adminTable).appendTo($("#admin"));
 
-name = "default-file"
-var myDB = (function () {
-    var dataFile = [];
-        $.ajax({
-            url: '../data/'+name+'.json',
-            dataType: "JSON",  
-            async: false,
-            error: function() {
-            dataFile.push({error: true,
-                sampleData: null});
-            },
-            success: function(data) {
-                dataFile.push({error: false,
-                    sampleData: data});
-            },
-            type: 'GET'
-            });
-        
-    if (dataFile[0].error == false) {
-        return {
-            getError: dataFile[0].error,
-            getData: dataFile[0].sampleData,
 
-        }
-    } else {
-        return {
-            getError: dataFile[0].error,
-            getData: ""
+var defaultDestination = destination("default-file")
+
+jQuery(document).ready(function ($) {
+    for(var k in defaultDestination.getDataCity())  {
+        if(typeof(defaultDestination.getDataCity()[k]) === 'string') {
+        inputElement(defaultDestination.getDataCity()[k])
         }
     }
 });
+
 $(button).on('click', function(event){
    var newData = $(form).serializeArray().map(function(index){    
         for(var k in defaultDestination.getDataCity())  {
@@ -100,6 +97,11 @@ $(button).on('click', function(event){
         Object.assign(objData, newData[index])
     })
     var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(objData));
-    $('<a href="data:' + data + '" download="' +objData["name"] + '-'+ objData["id"]+'.json">download JSON</a>').appendTo(form);
+    $(buttonDownload).disable(false);
+    $("#download-button").attr("href", 'data:' + data)
+                        .attr("download",  objData["name"] + '-'+ objData["id"]+'.json')
+     
+    //$('<a class="btn btn-primary btn-lg" href="data:' + data + '" download="' +objData["name"] + '-'+ objData["id"]+'.json">download JSON</a>').appendTo(form);
+    // $('<a href="data:' + data + '" download="' +objData["name"] + '-'+ objData["id"]+'.json">download JSON</a>').appendTo(form);
 })
 

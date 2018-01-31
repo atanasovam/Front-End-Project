@@ -21,16 +21,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
      <!--  -->
-     <script src="../scripts/jquery.js"></script>
-     <script src = "../scripts/database/data-base-save-json-admin.js"></script>
-     <script src="../scripts/manage-main-views.js"></script>
-   
-     <script src="../scripts/manage-profile-table.js"></script>
-     <!-- Functionality -->
     
-    <script src="../scripts/functionality/load-city.js"></script>
-    
-    <!--<script src="../scripts/functionality/load-history.js"></script>  -->
     <title>Title of the document</title>
 </head>
 
@@ -79,47 +70,42 @@
 
     <div class="index container">
 
-        <div id="top" class="row align-items-start" style="height:475px;">
+        <div id="top" class="row align-items-start" style="height:500px;">
             <div id="slideshow" class="col-xs-12" style="height:450px;"> </div>
         </div>
-        <div class="col-xs-12" style="height:500px;"></div>
-        <div id="partTwo" class="col-xs-12" style="height:100px;">
-            <p>Second part</p>
-            <p>
-                <div id="data"> </div>
-            </p>
-        </div>
+        
 
-
-        <div id="partOne" class="row align-items-center">
-            <div id="map" class="col-xs-6" style="height:600px;">
-                <img class="max-width-100-height-auto" src="../styles/images/cities/map.jpg">
+        <div id="partOne" class="row align-items-center" style="width:100%;">
+            <p>Part One                </p>
+            <div id="map" class="col-xs-2" style="height:100px;" style="height:500px;">
+                <!-- <img class="max-width-100-height-auto" src="../styles/images/cities/map.jpg"> -->
+                <img style="width:50%;" src="../styles/images/cities/map.jpg"> 
             </div>
-            <div id="curr-weather" class="col-xs-6" style="height:500px;">
+            <div id="curr-weather" class="col-xs-10" style="height:100px;">
             </div>
         </div>
 
-        <div id="partTwo" class="row align-items-center" style="height:100px;">
+        <div id="partTwo" class="row align-items-center" style="height:500px;">
             <div id="photo" class="col-xs-4"> </div>
             <div id="city-info" class="col-xs-4"> </div>
             <div id="top-places" class="col-xs-4"> </div>
-        </div>
-        
-        <div class="container">
-            <div class="row" style="height:500px;"></div>
-            <div id="about-part" class="row" style="height:100px;">
-                <p>This project - blah blah blah</p>
-            </div>
-        </div>
-        <div class="col-xs-12" style="height:500px;"></div>
-        <div class="container">
-            <div id="footer" class="row" style="height:100px;">
-                <p>Contact us</p>
-            </div>
-            <div id = "admin" class="row align-items-center"> </div>
+        </div> 
+        <div id="admin" class="row">
+            <p>Admin part</p>
+           
         </div>
 
+        <div id="about-part" class="row" style="height:500px;">
+             <p>This project - blah blah blah</p>
+        </div>
+        
+
+        <div id="footer" class="row" style="height:500px;">
+            <p>Contact us</p>
+        </div>
+            
     </div>
+
 
     <div class="profile-page">
         <div class="user-intro">
@@ -213,12 +199,17 @@
             </form>
         </div>
     </div>
-
-
     <script src="../scripts/jquery.js"></script>
-    <!-- <script src = "../scripts/database/data-base-load-txt.js"></script> -->
+    <script src = "../scripts/database/data-base-load-json.js"></script>
+    <script src="../scripts/manage-admin-views.js"></script>
     <script src="../scripts/manage-main-views.js"></script>
+  
     <script src="../scripts/manage-profile-table.js"></script>
+    <!-- Functionality -->
+    <script src="../scripts/functionality/load-city.js"></script> 
+   
+   <!--<script src="../scripts/functionality/load-history.js"></script>  -->
+
 </body>
 
 </html>
