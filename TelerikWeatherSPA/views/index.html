@@ -21,6 +21,16 @@
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
      <!--  -->
+     <script src="../scripts/jquery.js"></script>
+     <script src = "../scripts/database/data-base-save-json-admin.js"></script>
+     <script src="../scripts/manage-main-views.js"></script>
+   
+     <script src="../scripts/manage-profile-table.js"></script>
+     <!-- Functionality -->
+    
+    <script src="../scripts/functionality/load-city.js"></script>
+    
+    <!--<script src="../scripts/functionality/load-history.js"></script>  -->
     <title>Title of the document</title>
 </head>
 
@@ -68,51 +78,53 @@
         </div>
     </div>
 
-    <div class="index">
-        <div id="top" class="col-xs-12" style="height:500px;"></div>
-        <div id="partOne" class="col-xs-12" style="height:500px;">
-            <p>First part</p>
+    <div class="index container">
+
+        <div id="top" class="row align-items-start" style="height:475px;">
+            <div id="slideshow" class="col-xs-12" style="height:450px;"> </div>
         </div>
-        
-        <div id="partTwo" class="col-xs-12" style="height:500px;">
-            <p>Second part</p>
-            <!-- 
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="country">Country</label>
-                        </div>
-                        <div class="col-75">
-                          <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-25">
-                          <label for="subject">Subject</label>
-                        </div>
-                        <div class="col-75">
-                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <input type="submit" value="Submit">
-                      </div>
-                    </form>
-                  </div> -->
-            <p><div id = "data"> </div></p>
+        <div id="city-types" class="row align-items-end">
+            <div class="col-xs-2 col-xs-offset-1">
+                <img class="max-width-100-height-auto" src="../styles/images/mountain.png" />
+            </div>
+            <div class="col-xs-2 col-xs-offset-2">
+                <img class="max-width-100-height-auto" src="../styles/images/beach.png" />
+            </div>
+            <div class="col-xs-2 col-xs-offset-2">
+                <img class="max-width-100-height-auto" src="../styles/images/Eiffel-tower.png" />
+            </div>
         </div>
-       
-        <div id="about-part" class="col-xs-12" style="height:500px;">
-            <p>This project - blah blah blah</p>
+
+
+        <div id="partOne" class="row align-items-center">
+            <div id="map" class="col-xs-6" style="height:600px;">
+                <img class="max-width-100-height-auto" src="../styles/images/cities/map.jpg">
+            </div>
+            <div id="curr-weather" class="col-xs-6" style="height:500px;">
+            </div>
+        </div>
+
+        <div id="partTwo" class="row align-items-center" style="height:100px;">
+            <div id="photo" class="col-xs-4"> </div>
+            <div id="city-info" class="col-xs-4"> </div>
+            <div id="top-places" class="col-xs-4"> </div>
+        </div>
+        <div id = "admin" class="row align-items-center"> </div>
+        <div class="container">
+            <div class="row" style="height:500px;"></div>
+            <div id="about-part" class="row" style="height:100px;">
+                <p>This project - blah blah blah</p>
+            </div>
         </div>
         <!-- <a class="scroll" href= "#partTwo">Part Two</a> -->
+        <div class="col-xs-12" style="height:500px;"></div>
+        <div class="container">
+            <div id="footer" class="row" style="height:100px;">
+                <p>Contact us</p>
+            </div>
 
-        <div id="footer" class="col-xs-12" style="height:100px;">
-            <p>Contact us</p>
         </div>
+
     </div>
 
     <div id="profile-page">
@@ -188,12 +200,7 @@
         </div>
         <!-- TODO profile page -->
     </div>
-
-    <script src="../scripts/jquery.js"></script>
-    <script src = "../scripts/database/data-base-save-json-admin.js"></script>
-    <script src="../scripts/manage-main-views.js"></script>
     <script src="../scripts/manage-admin-views.js"></script>
-    <script src="../scripts/manage-profile-table.js"></script>
 </body>
 
 </html>
