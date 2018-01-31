@@ -42,14 +42,15 @@ body {
 
 body::after {
     pointer-events: none;
+    background-size: 100%;
     content: "";
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background-japan.jpg);
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-repeat: repeat-y;
-    position: absolute;
+    /* background-repeat: r; */
+    position: fixed;
     z-index: -1;
     opacity: 0.6;
 }

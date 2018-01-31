@@ -12,8 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    
     <!-- Firebase links -->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
@@ -26,6 +25,7 @@
 </head>
 
 <body>
+
     <div type = "text" id = "result">
             
     </div>
@@ -70,20 +70,46 @@
 
     <div class="index">
         <div id="top" class="col-xs-12" style="height:500px;"></div>
-        <div id="partOne" class="col-xs-12" style="height:100px;">
+        <div id="partOne" class="col-xs-12" style="height:500px;">
             <p>First part</p>
         </div>
-        <div class="col-xs-12" style="height:500px;"></div>
-        <div id="partTwo" class="col-xs-12" style="height:100px;">
+        
+        <div id="partTwo" class="col-xs-12" style="height:500px;">
             <p>Second part</p>
+            <!-- 
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="country">Country</label>
+                        </div>
+                        <div class="col-75">
+                          <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="subject">Subject</label>
+                        </div>
+                        <div class="col-75">
+                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <input type="submit" value="Submit">
+                      </div>
+                    </form>
+                  </div> -->
             <p><div id = "data"> </div></p>
         </div>
-        <div class="col-xs-12" style="height:500px;"></div>
-        <div id="about-part" class="col-xs-12" style="height:100px;">
+       
+        <div id="about-part" class="col-xs-12" style="height:500px;">
             <p>This project - blah blah blah</p>
         </div>
         <!-- <a class="scroll" href= "#partTwo">Part Two</a> -->
-        <div class="col-xs-12" style="height:500px;"></div>
+
         <div id="footer" class="col-xs-12" style="height:100px;">
             <p>Contact us</p>
         </div>
@@ -164,8 +190,9 @@
     </div>
 
     <script src="../scripts/jquery.js"></script>
-    <script src = "../scripts/database/data-base-load-txt.js"></script>
+    <script src = "../scripts/database/data-base-save-json-admin.js"></script>
     <script src="../scripts/manage-main-views.js"></script>
+    <script src="../scripts/manage-admin-views.js"></script>
     <script src="../scripts/manage-profile-table.js"></script>
 </body>
 
