@@ -6,7 +6,10 @@
     font-weight: 900;
 }
 
-
+#main-container {
+    padding: 10% 10% 10% 10%;
+    width: 100%;
+}
 /* Navbar */
 
 #navbar {
@@ -38,7 +41,7 @@
 /* Body */
 
 body {
-    position: relative;
+    position: absolute; 
 }
 
 body::after {

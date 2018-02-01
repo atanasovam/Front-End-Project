@@ -4,6 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="../styles/css/styles.css" rel="stylesheet">
     <link href="../styles/css/checkbox-style.css" rel="stylesheet">
+    <link href="../styles/css/weather-display.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,7 +69,7 @@
         </div>
     </div>
 
-    <div class="index container">
+    <div class="index container" id = "main-container">
 
         <div id="top" class="row align-items-start" style="height:500px;">
             <div id="slideshow" class="col-xs-12" style="height:450px;"> </div>
@@ -77,11 +78,15 @@
 
         <div id="partOne" class="row align-items-center" style="width:100%;" style="height:500px;">
            
-            <div id="map" class="col-xs-6" style="height:200px;">
+            <div id="map" class="col-xs-6" style="height:400px;" >
                 <p>Part One                </p>
-                <div id = "#country">
-                    
+
+            </div>
+            <div id="weather-live" class="col-xs-6">
+                <div id ="weather-box" >
+                    <h1>Today</h1>
                 </div>
+                
             </div>
                 <!-- <img class="max-width-100-height-auto" src="../styles/images/cities/map.jpg"> -->
                 <!-- <img style="width:50%;" src="../styles/images/cities/map.jpg">  -->
@@ -207,12 +212,15 @@
     <script src="../scripts/jquery.js"></script>
     <script src = "../scripts/database/data-base-load-json.js"></script>
     <script src="../scripts/manage-admin-views.js"></script>
+    <script src="../scripts/manage-weather-live-views.js"></script>
     <script src="../scripts/manage-main-views.js"></script>
   
     <script src="../scripts/manage-profile-table.js"></script>
     <!-- Functionality -->
     <script src="../scripts/functionality/load-city.js"></script> 
+    <script src="../scripts/weather-live-data/openweather-request.js"></script>
     <script src="../scripts/map/map-set-up.js"></script> 
+ 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0HeNhdqO0V6nJXW7CYQ28QoUQhUYqkYc&callback=initMap"
     type="text/javascript"></script>
    

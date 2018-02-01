@@ -1,0 +1,14 @@
+#weather-live {
+    padding: 0px 20px 0px 20px;
+    height: 400px;
+}
+
+#weather-box {
+    height: 100%;
+    text-align: center; 
+    color: #fefefe;
+    font-weight: normal;
+    padding: 20px;
+    font-size: 200%;
+    background: rgba(34,34,34,0.75);
+  }
