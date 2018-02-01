@@ -8,6 +8,7 @@ var destination = (function () {
     var averageTemp;
     var country;
     var id;
+    var continent;
     var location;
     var info;
     var categoryType = [{historical: false}, {seaside: false}, 
@@ -17,6 +18,9 @@ var destination = (function () {
     var currentTemperature;
 
     return {
+      setContinent: function(continentCity) {
+          continent = continentCity;
+      },
       setName: function (nameCity) {
           name = nameCity;
       },
@@ -46,7 +50,8 @@ var destination = (function () {
             temperatureC: temperatureC,
             id: id,
             info: info, 
-            averageTemp: averageTemp
+            averageTemp: averageTemp,
+            continent: continent
         }
      }
    };
@@ -54,9 +59,11 @@ var destination = (function () {
 })();
 
 
-destination.setName("DestinationName") 
+destination.setContinent("My Continent")
+
+destination.setName("Destination Name") 
 destination.setCountry("Country")
-destination.setId("OpenWeatherAPIID");
+destination.setId("OpenWeather API ID");
 destination.setTemperatureC("Temperature");
 destination.setInfo("Information")
 destination.setAverageTemp("Average Temperature")

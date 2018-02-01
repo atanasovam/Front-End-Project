@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    
+
     <!-- Firebase links -->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
@@ -75,14 +75,19 @@
         </div>
         
 
-        <div id="partOne" class="row align-items-center" style="width:100%;">
-            <p>Part One                </p>
-            <div id="map" class="col-xs-2" style="height:100px;" style="height:500px;">
+        <div id="partOne" class="row align-items-center" style="width:100%;" style="height:500px;">
+           
+            <div id="map" class="col-xs-6" style="height:200px;">
+                <p>Part One                </p>
+                <div id = "#country">
+                    
+                </div>
+            </div>
                 <!-- <img class="max-width-100-height-auto" src="../styles/images/cities/map.jpg"> -->
-                <img style="width:50%;" src="../styles/images/cities/map.jpg"> 
-            </div>
-            <div id="curr-weather" class="col-xs-10" style="height:100px;">
-            </div>
+                <!-- <img style="width:50%;" src="../styles/images/cities/map.jpg">  -->
+            <!-- </div> -->
+            <!-- <div id="curr-weather" class="col-xs-10" style="height:100px;">
+            </div> -->
         </div>
 
         <div id="partTwo" class="row align-items-center" style="height:500px;">
@@ -207,6 +212,9 @@
     <script src="../scripts/manage-profile-table.js"></script>
     <!-- Functionality -->
     <script src="../scripts/functionality/load-city.js"></script> 
+    <script src="../scripts/map/map-set-up.js"></script> 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0HeNhdqO0V6nJXW7CYQ28QoUQhUYqkYc&callback=initMap"
+    type="text/javascript"></script>
    
    <!--<script src="../scripts/functionality/load-history.js"></script>  -->
 
