@@ -5,5 +5,7 @@ jQuery(document).ready(function ($) {
     });
     $('.profile-page').addClass('hidden');
     $('.log-in').addClass('hidden');
+   // $("#admin").addClass('hidden')
+   $("#admin").addClass('hidden')
 });
 

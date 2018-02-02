@@ -6,7 +6,8 @@
     font-weight: 900;
 }
 
-#main-container {
+.index {
+    /* position: fixed; */
     padding: 10% 10% 10% 10%;
     width: 100%;
 }
@@ -65,7 +66,8 @@ body::after {
 }
 
 .hidden {
-    display: none !important;
+    display: none;
+    /* !important; */
 }
 
 ul,
@@ -124,13 +126,13 @@ ol {
     padding-top: 150px;
     display: block;
 }
-}
+
 
 .max-width-100-height-auto {
     max-width: 100%;
     height: auto;
 }
-
+/* 
 .container, .row {
     margin: 15px 0px;
-}
+} */
