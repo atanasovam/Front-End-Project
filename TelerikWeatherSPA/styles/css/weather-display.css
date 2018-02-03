@@ -1,6 +1,12 @@
+#partOne {
+
+    height: 50vh;
+
+}
 #weather-live {
     padding: 0px 20px 0px 20px;
-    height: 400px;
+    height: 100%;
+
 }
 
 #weather-box {
@@ -11,7 +17,8 @@
     padding: 20px;
     font-size: 200%;
     background: rgba(34,34,34,0.75);
-  }
-  .object {
-    fill:rebeccapurple
-  }
+}
+#map {
+
+  height:100%;
+}

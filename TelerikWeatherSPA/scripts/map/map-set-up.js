@@ -6,6 +6,7 @@ function initMap() {
     center: {lat: 42.683, lng: 23.390},
     zoom: 8
     });
+    
     google.maps.event.addListener(map, 'click', function(event) {
         //alert(event.latLng)
         //var address = encodeURIComponent($("#location").val());
