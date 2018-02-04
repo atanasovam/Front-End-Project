@@ -119,7 +119,6 @@ ol {
     }
 }
 
-
 /* Login form */
 
 .log-in {
@@ -127,12 +126,20 @@ ol {
     display: block;
 }
 
-
 .max-width-100-height-auto {
     max-width: 100%;
     height: auto;
 }
-/* 
-.container, .row {
-    margin: 15px 0px;
-} */
+
+#about-part, #footer {
+    padding: 20px;
+}
+
+#about-part>p, #footer>p {
+font-size: 1.5em;
+}
+
+#about-part>h1, #footer>h1 {
+    font-weight: bolder;
+    font-size: 2em;  
+}

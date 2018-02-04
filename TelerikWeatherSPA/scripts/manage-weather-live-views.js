@@ -18,7 +18,6 @@ var showCurrentWeather = (function (city, jsonWeather) {
     var temperatureCelsius = convertTemp(jsonWeather.main.temp) + "&deg;C";
     var iconUrl = "../../styles/images/weather-icons/" + jsonWeather.weather[0].icon + ".svg";
     var thatDay = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
-    console.log(jsonWeather);
     $(".date").html(thatDay);
     $("#city-name").html(city);
     $("#city-tempC").html(temperatureCelsius);
@@ -26,7 +25,6 @@ var showCurrentWeather = (function (city, jsonWeather) {
     $("#icon img").attr("src", iconUrl);
 
     var weatherBox = $("#weather-box");
-    console.log(weatherBox.height());
     if (Number.parseInt(weatherBox.height()) > 500) {
         weatherBox.css("fontSize", "90%");
     } else {
