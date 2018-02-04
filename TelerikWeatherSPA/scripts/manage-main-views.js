@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    const showProfilePage = function () {
+    var showProfilePage = function () {
         $('.last-searched').addClass('hidden');
         $('.next-trip-places').addClass('hidden');
         $('.select-dest-type').addClass('hidden');
@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
         $('.last-searched .next-trip-places .select-dest-type').addClass('hidden');
     };
 
-    const hideProfilePage = function () {
+    var hideProfilePage = function () {
         $('log-in').addClass('hidden');
         $('.profile-page')
             .addClass('hidden');
@@ -19,17 +19,17 @@ jQuery(document).ready(function ($) {
     };
 
     const showLogInForm = function () {
-        const login = function () {
-            const email = $('#email').val().trim();
-            const pass = $('#password').val().trim();
+        var login = function () {
+            var email = $('#email').val().trim();
+            var pass = $('#password').val().trim();
 
             // const rgx = new RegExp(/(\S+)@(\S+)\.(\S+)/, 'g');
-            const isAdmin = email === 'admin@ad.com' && pass === 'admin';
-            const isValidUser = email.length > 6 && pass.length > 6;
+            var isAdmin = email === 'admin@ad.com' && pass === 'admin';
+            var isValidUser = email.length > 6 && pass.length > 6;
             // debugger
-            const loginButton = $('#sign-up');
-            const logoutButton = $('#sign-out');
-            const greetings = $('#logged');
+            var loginButton = $('#sign-up');
+            var logoutButton = $('#sign-out');
+            var greetings = $('#logged');
             if (isAdmin) {
                 // showControlPanel();
                 alert('admin')
@@ -58,14 +58,14 @@ jQuery(document).ready(function ($) {
         $('#log-user').on('click', login);
     };
 
-    const logout = function () {
+    var logout = function () {
         hideProfilePage();
         $('#logged').text('');
         $('#sign-up').text('Sign up');
         $('#sign-out').text('');
     };
 
-    const manageGreetings = function () {
+    var manageGreetings = function () {
         $('.index').addClass('hidden');
         $('.log-in').addClass('hidden');
         $('.profile-page').removeClass('hidden');

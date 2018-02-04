@@ -1,12 +1,12 @@
-const favPlaces = $('.fav-places');
-const visitedDest = $('.last-searched');
-const nextTripDest = $('.next-trip-places');
-const selectDestType = $('.select-dest-type');
+var favPlaces = $('.fav-places');
+var visitedDest = $('.last-searched');
+var nextTripDest = $('.next-trip-places');
+var selectDestType = $('.select-dest-type');
 
-const show = function (el) {
+var show = function (el) {
     el.removeClass('hidden');
 };
-const hide = function (el) {
+var hide = function (el) {
     el.addClass('hidden');
 };
 

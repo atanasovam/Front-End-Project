@@ -1,4 +1,3 @@
-
 var name1 = 'London'
 var name2 = "Berlin"
 console.log(destination(name1).getDataCity())
