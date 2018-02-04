@@ -1,7 +1,5 @@
 #partOne {
-
     height: 50vh;
-
 }
 #weather-live {
     padding: 0px 20px 0px 20px;
@@ -14,11 +12,32 @@
     text-align: center; 
     color: #fefefe;
     font-weight: normal;
-    padding: 20px;
+    padding: 0px 20px;
     font-size: 200%;
     background: rgba(34,34,34,0.75);
 }
 #map {
-
   height:100%;
 }
+
+.w-50 {
+    width: 50%;
+    display: inline-block;
+  }
+  #icon img {
+    width: 50%;
+  }
+  .right {
+    text-align: right;
+  }
+  .date {
+    font-size: 0.55em;
+    text-align: left;
+  }
+  #city-name {
+    font-size: 1.2em;
+  }
+  #city-tempC {
+    font-size: 4.5em;
+    font-weight: bold;
+  }
