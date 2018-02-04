@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+(function () {
 
     var createProjectInfo = function () {
         var projectBox = $("<div/>")
@@ -26,7 +26,6 @@ jQuery(document).ready(function ($) {
  
     $(function () {
         var $projectInfo = createProjectInfo();
-        console.log($projectInfo);
         $("#about-part").html($projectInfo);
         var footer = createFooter();
         $("#footer").html(footer);
