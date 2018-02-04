@@ -92,7 +92,7 @@ ol {
 }
 
 .fav-places,
-.visited-dest,
+.last-searched,
 .next-trip-places {
     text-align: center;
     color: black;

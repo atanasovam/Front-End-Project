@@ -1,12 +1,12 @@
 jQuery(document).ready(function ($) {
     const showProfilePage = function () {
-        $('.visited-dest').addClass('hidden');
+        $('.last-searched').addClass('hidden');
         $('.next-trip-places').addClass('hidden');
         $('.select-dest-type').addClass('hidden');
 
         $('.log-in').addClass('hidden');
         $('.profile-page').removeClass('hidden');
-        $('.visited-dest .next-trip-places .select-dest-type').addClass('hidden');
+        $('.last-searched .next-trip-places .select-dest-type').addClass('hidden');
     };
 
     const hideProfilePage = function () {

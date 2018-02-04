@@ -1,5 +1,5 @@
 const favPlaces = $('.fav-places');
-const visitedDest = $('.visited-dest');
+const visitedDest = $('.last-searched');
 const nextTripDest = $('.next-trip-places');
 const selectDestType = $('.select-dest-type');
 
@@ -17,7 +17,7 @@ $('#fav-places').on('click', function () {
 
     show(favPlaces);
 });
-$('#visited-dest').on('click', function () {
+$('#last-searched').on('click', function () {
     hide(favPlaces);
     hide(nextTripDest);
     hide(selectDestType);
