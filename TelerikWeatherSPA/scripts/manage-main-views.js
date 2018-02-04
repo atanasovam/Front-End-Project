@@ -18,12 +18,12 @@ jQuery(document).ready(function ($) {
             .removeClass('hidden');
     };
 
-    const showLogInForm = function () {
+    var showLogInForm = function () {
         var login = function () {
             var email = $('#email').val().trim();
             var pass = $('#password').val().trim();
 
-            // const rgx = new RegExp(/(\S+)@(\S+)\.(\S+)/, 'g');
+            // var rgx = new RegExp(/(\S+)@(\S+)\.(\S+)/, 'g');
             var isAdmin = email === 'admin@ad.com' && pass === 'admin';
             var isValidUser = email.length > 6 && pass.length > 6;
             // debugger
