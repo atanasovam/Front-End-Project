@@ -16,19 +16,13 @@
         return $box;
     };
 
-    $(function () {
-       // data.getCityHistoryData()
-       var cityHistoryData;
-       setTimeout(()=>{
-       var cityJson = {"name":"Sofia","country":"Bulgaria","imgUrl": "../styles/images/cities/Sofia.jpg", "temperatureHistory":[{"temperature":10,"date":1995}],"temperatureC":10,"id":2};
-       cityHistoryData = JSON.stringify(cityJson);
-       }, 3000).then(function (cityHistoryData) {
-        var $info =  $("<p/>").html(cityHistoryData.name);
+    $(function (city) {
+      
+        var $info =  $("<p/>").html(city.name);
         //var $info = createHistoryInfoBox(cityHistoryData);
         $("#photo").html($info);
-       }
-       );
+
     });
             
 
-})(window);
+})();
