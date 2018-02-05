@@ -11,6 +11,7 @@
     padding: 10% 10% 10% 10%;
     width: 100%;
 }
+
 /* Navbar */
 
 #navbar {
@@ -38,11 +39,10 @@
     z-index: 1;
 }
 
-
 /* Body */
 
 body {
-    position: absolute; 
+    position: absolute;
 }
 
 body::after {
@@ -75,7 +75,6 @@ ol {
     list-style-type: none;
 }
 
-
 /* Profile page */
 
 .profile-pic {
@@ -101,7 +100,6 @@ ol {
 .select-profile-choises {
     padding-top: 5px;
 }
-
 
 /* @media only sreen and (max-width: 1048px) {
 
@@ -131,15 +129,38 @@ ol {
     height: auto;
 }
 
-#about-part, #footer {
-    padding: 20px;
+#about-part,
+#footer,
+#partOne {
+    height: 50vh;
+    width: 100%;
+    padding: 10px 20px;
 }
 
-#about-part>p, #footer>p {
-font-size: 1.5em;
+#partTwo {
+    height: 50vh;
+    width: 100%;
+    padding: 10px 5px;
 }
 
-#about-part>h1, #footer>h1 {
+#about-part>p,
+#footer>p,
+#top-places>p {
+    font-size: 1.5em;
+}
+
+#city-info>p {
+    font-size: 1.2em;
+}
+
+#top-places>p {
+    text-align: center;
     font-weight: bolder;
-    font-size: 2em;  
+    background: rgba(34, 34, 34, 0.25);
+}
+
+#about-part>h1,
+#footer>h1 {
+    font-weight: bolder;
+    font-size: 2em;
 }

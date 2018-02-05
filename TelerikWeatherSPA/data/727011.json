@@ -1,0 +1,55 @@
+{
+    "name": "София",
+    "country": "България",
+    "temperatureHistory": [{
+        "main": {
+            "temp": 10,
+            "pressure":1010,
+            "humidity": 86
+        },
+        "wind":{
+            "speed":2.1,
+            "deg":30
+         },
+        "clouds":{
+            "all":90
+         }, 
+         "weather":[
+            {
+               "id":701,
+               "main":"Mist",
+               "description":"mist",
+               "icon":"50n"
+            }],
+            "dt":1485907200,
+        "dt_iso":"2017-01-01 00:00:00 +0000 UTC"
+    }
+],
+    "id": 727011,
+    "info": "Sofia is the biggest city in Bulgaria, and is at the 15th in Europa. The city is tucked away Vitosha mountain. Sofia if known with wealthy culture and history. The tourists may enjoy of the Vitosha mountain all over the year, to go skiing or snowboarding, to climb or just go for a walk, mountain biking.",
+    "mountain": true,
+    "beach": true,
+    "culture": true,
+    "places": [{
+        "name": "Church of St. George" 
+    },
+    {
+        "name": "National theatre Ivan Vasov" 
+    },
+    {
+        "name": "Basilica Hagia Sophia" 
+    },
+    {
+        "name": "Largo Sofia - Serdica city" 
+    },
+    {
+        "name": "Sofia University" 
+    },
+    {
+        "name": "Alexander Nevsky Cathedral" 
+    },
+    {
+        "name": "National library" 
+    }
+]
+}
