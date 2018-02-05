@@ -164,3 +164,15 @@ ol {
     font-weight: bolder;
     font-size: 2em;
 }
+
+#photo, #places, #city-info {
+    max-height: 30vh;
+}
+
+#photo, #places {
+    overflow: hidden;
+}
+
+#city-info {
+    overflow: auto;
+}

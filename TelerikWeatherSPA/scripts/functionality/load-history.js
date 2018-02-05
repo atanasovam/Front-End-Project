@@ -48,9 +48,8 @@
         var cityHistory = destination(727011).getDataCity();
         var $infoBox = createHistoryInfoBox(cityHistory);
         $("#partTwo").html($infoBox);
-
+       
         changePlacesImg(cityHistory);
-        
     });
 
 
