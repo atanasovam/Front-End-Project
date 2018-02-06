@@ -2,7 +2,7 @@
 
     var createProjectInfo = function () {
         var projectBox = $("<div/>")
-            .append($("<h1/>").html("For the project"))
+            .append($("<h1/>").html("About this project"))
             .append($("<p/>").html("WheatherTour is WebApp, created as group project in Telerik Academy Alpha JavaScript Nov’2017. The members of the team are Lachezar, Milena, and Slavka."))
             .append($("<p/>").html("Our App represent current weather data in chosen city. Also show some images and info for the city and top tourist places, some weather history for the period that you choose."))
             .append($("<p/>").html("You can choose city, admin can add info for new cities."))
