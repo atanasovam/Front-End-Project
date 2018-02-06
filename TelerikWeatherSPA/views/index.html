@@ -122,9 +122,10 @@
                     <ol class="fav-places-ol">
                     </ol>
 
-                    <label for="addInput" id="label">
-                        <input type="text" class="form-control" id="addInput" placeholder="Enter city name">
-                        <button type="button" id="add" class="btn btn-primary">Add</button>
+                    <label for="addInput" id="labelFavCity">
+                        <input type="text" class="form-control" 
+                        id="addInput" placeholder="Enter city name">
+                        <button type="button" id="addFav" class="btn btn-primary">Add</button>
                     </label>
                 </div>
                 <div class="last-searched">
@@ -132,12 +133,13 @@
                     </ul>
                 </div>
                 <div class="next-trip-places">
-                    <ul>
-                        <li>Place to visit...</li>
-                        <li>Place to visit...</li>
-                        <li>Place to visit...</li>
-                        <li>Place to visit...</li>
-                    </ul>
+                    <ol class="next-trip-places-ol">
+                    </ol>
+
+                    <label for="nextTrip" id="labelNextDest">
+                        <input type="text" class="form-control" id="nextTrip" placeholder="Enter next destination">
+                        <button type="button" id="addNextDest" class="btn btn-primary">Add next destination</button>
+                    </label>
                 </div>
                 <div class="select-dest-type">
                     <li class="list-group-item">
@@ -185,15 +187,15 @@
             </form>
         </div>
     </div>
-
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/database/data-base-load-json.js"></script>
     <script src="../scripts/manage-admin-views.js"></script>
-    <script src="../scripts/add-fav-city.js"></script>
+    <script src="../scripts/profile-table/add-fav-city.js"></script>
+    <script src="../scripts/profile-table/add-next-trip-dest.js"></script>
     <script src="../scripts/manage-weather-live-views.js"></script>
     <script src="../scripts/manage-main-views.js"></script>
 
-    <script src="../scripts/manage-profile-table.js"></script>
+    <script src="../scripts/profile-table/manage-profile-table.js"></script>
     <!-- Functionality -->
     <script src="../scripts/weather-live-data/openweather-request.js"></script>
     <script src="../scripts/map/map-set-up.js"></script>
