@@ -15,7 +15,7 @@ var database = (function (online = true) {
         url: databaseUrl+systemFile, 
         dataType: 'JSON',
         success: function(data) {
-            console.log(data.system.condition)
+            // console.log(data.system.condition)
         }, 
         type: 'GET'
     });

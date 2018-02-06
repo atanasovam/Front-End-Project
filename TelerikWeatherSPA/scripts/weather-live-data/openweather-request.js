@@ -10,7 +10,7 @@ var requestForecast = (function(myCity) {
     //alert("hi" + myCity)
     weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + myCity + "&appid=" + weatherAPI
     //alert(weatherURL)
-    console.log(weatherURL)
+    // console.log(weatherURL)
     $.ajax({
         type: "GET",
         url: weatherURL,

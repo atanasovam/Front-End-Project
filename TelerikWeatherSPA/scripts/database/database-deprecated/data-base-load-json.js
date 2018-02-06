@@ -37,7 +37,7 @@ var openDB = (function() {
       var db = [];
     
       databaseOpen(function(data) {
-        alert("The json file has been openned successfully");
+        // alert("The json file has been openned successfully");
         db.push(data);
       });
     
@@ -52,20 +52,20 @@ var openDB = (function() {
     
       function databaseError(e) {
         //console.error('An IndexedDB error has occurred', e);
-        alert("Couldn't open file")
+        alert("Couldn't open file");
       }
     return {
         loadData: db,
     }
 }());
     
-console.log(openDB.loadData)
+// console.log(openDB.loadData)
 
 
 
 var destination = (function (dataCities) {
      var data = dataCities[0];
-     console.log(data)
+    //  console.log(data)
      // privates
      var name;
      var country;
@@ -91,7 +91,7 @@ var destination = (function (dataCities) {
     };
 })(openDB.loadData);
 
-alert(destination.getDataCity().name+Date.now())
+// alert(destination.getDataCity().name+Date.now())
 
 // jQuery(document).ready(function ($) {
 

@@ -32,7 +32,7 @@ jQuery(document).ready(function ($) {
             var greetings = $('#logged');
             if (isAdmin) {
                 // showControlPanel();
-                alert('admin')
+                // alert('admin')
             } else if (isValidUser) {
                 showProfilePage();
 

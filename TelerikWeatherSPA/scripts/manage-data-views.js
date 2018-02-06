@@ -1,6 +1,6 @@
 var name1 = 'London'
 var name2 = "Berlin"
-console.log(destination(name1).getDataCity())
+// console.log(destination(name1).getDataCity())
 
 jQuery(document).ready(function ($) {
     $("<p>").appendTo("#partOne")
@@ -11,7 +11,6 @@ jQuery(document).ready(function ($) {
 
 
 jQuery(document).ready(function ($) {
-    console.log( destination(name2).getDataCity())
-
+    // console.log( destination(name2).getDataCity())
 });
 

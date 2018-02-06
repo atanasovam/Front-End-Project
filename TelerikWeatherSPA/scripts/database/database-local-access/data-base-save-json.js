@@ -49,7 +49,7 @@ destination.setTemperatureC(10)
 destination.addTemperatureHistorical(10, 1995)
 
 cityData = destination.getAllData()
-console.log(destination.getAllData())
+// console.log(destination.getAllData())
 var data = JSON.stringify(cityData);  
 var nameString = destination.getAllData().name.trim() + ""
 var folderName = './Front-End-Project/TelerikWeatherSpa/data/'
