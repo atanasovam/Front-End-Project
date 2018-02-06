@@ -28,9 +28,6 @@
 </head>
 
 <body>
-    <div type="text" id="result">
-
-    </div>
     <div class="sticky-top">
         <div class="nav navbar-collapse" id="navbar">
             <div class="container-first">
@@ -71,7 +68,6 @@
     </div>
 
     <div class="index container">
-
         <object src="../styles/images/weather-icons/01d.svg" type="image/svg+xml"></object>
 
         <div id="top" class="row align-items-start" style="height:500px;">
@@ -123,12 +119,13 @@
             </ul>
             <div class="profile-choises">
                 <div class="fav-places">
-                    <ol>
-                        <li>Place 1</li>
-                        <li>Place 2</li>
-                        <li>Place 3</li>
-                        <li>Place 4</li>
+                    <ol class="fav-places-ol">
                     </ol>
+
+                    <label for="addInput" id="label">
+                        <input type="text" class="form-control" id="addInput" placeholder="Enter city name">
+                        <button type="button" id="add" class="btn btn-primary">Add</button>
+                    </label>
                 </div>
                 <div class="last-searched">
                     <ul class="last-searched-ul">
@@ -192,6 +189,7 @@
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/database/data-base-load-json.js"></script>
     <script src="../scripts/manage-admin-views.js"></script>
+    <script src="../scripts/add-fav-city.js"></script>
     <script src="../scripts/manage-weather-live-views.js"></script>
     <script src="../scripts/manage-main-views.js"></script>
 
