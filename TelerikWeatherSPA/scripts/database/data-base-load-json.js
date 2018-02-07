@@ -78,7 +78,10 @@ var destination = (function (name) {
         return readyData;
       },
        getName: function() {
-         return name
+         return name;
+       },
+       getId: function() {
+           return id;
        }
 
     };
