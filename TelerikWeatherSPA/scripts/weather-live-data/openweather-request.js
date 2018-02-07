@@ -27,6 +27,7 @@ var requestForecast = (function(myCity) {
             data  = JSON.stringify(data)
             var json = JSON.parse(data);
             showCurrentWeather(myCity, json);
+            showHistoryPanel(json.id);
             return;
 
         }
