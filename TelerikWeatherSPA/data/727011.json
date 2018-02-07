@@ -28,7 +28,7 @@
     "id": 727011,
     "info": "Sofia is the biggest city in Bulgaria, and is at the 15th in Europa. The city is tucked away Vitosha mountain. Sofia if known with wealthy culture and history. The tourists may enjoy of the Vitosha mountain all over the year, to go skiing or snowboarding, to climb or just go for a walk, mountain biking.",
     "mountain": true,
-    "beach": true,
+    "beach": false,
     "culture": true,
     "places": [{
         "name": "Church of St. George" 

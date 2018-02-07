@@ -1,5 +1,5 @@
-var weatherAPI = "d02c694acad022199a1b3557673bc4e5"
-var weatherURL = "?"
+var weatherAPI = "d02c694acad022199a1b3557673bc4e5";
+var weatherURL = "?";
 var convertTemp = (function(degreesKelvin) {
     var degreesCels = Math.round(Number(degreesKelvin) - 273.15);
     return degreesCels;
@@ -8,9 +8,8 @@ var convertTemp = (function(degreesKelvin) {
 var requestForecast = (function(myCity) {
     //var myCity = "London"
     //alert("hi" + myCity)
-    weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + myCity + "&appid=" + weatherAPI
+    weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + myCity + "&appid=" + weatherAPI;
     //alert(weatherURL)
-    // console.log(weatherURL)
     $.ajax({
         type: "GET",
         url: weatherURL,
@@ -27,8 +26,6 @@ var requestForecast = (function(myCity) {
            
             data  = JSON.stringify(data)
             var json = JSON.parse(data);
-            // alert("Temperature in " + myCity + " " +  convertTemp(json.main.temp) + "&deg;C")
-            // console.log(convertTemp(json.main.temp)  + "&deg;C");
             showCurrentWeather(myCity, json);
             return;
 

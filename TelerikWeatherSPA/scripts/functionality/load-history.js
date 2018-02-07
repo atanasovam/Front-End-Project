@@ -37,18 +37,19 @@
             $("#places p").first().html(cityHistory.places[i % len].name);
             $("#places img").first().attr("src", cityImgUrl1 + i % len + ".jpg");
             i += 1;
-            setTimeout(function(){
+            setTimeout(function () {
                 changeImg();
             }, time);
-           }
-           changeImg();
+        }
+        changeImg();
     }
 
     $(function () {
-        var cityHistory = destination(727011).getDataCity();
+        var cityHistory = destination(725712).getDataCity();
+        console.log();
         var $infoBox = createHistoryInfoBox(cityHistory);
         $("#partTwo").html($infoBox);
-       
+
         changePlacesImg(cityHistory);
     });
 

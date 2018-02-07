@@ -1,0 +1,50 @@
+{
+    "name": "Враца",
+    "country": "България",
+    "temperatureHistory": [{
+        "main": {
+            "temp": 10,
+            "pressure": 1010,
+            "humidity": 86
+        },
+        "wind": {
+            "speed": 2.1,
+            "deg": 30
+        },
+        "clouds": {
+            "all": 90
+        },
+        "weather": [{
+            "id": 701,
+            "main": "Mist",
+            "description": "mist",
+            "icon": "50n"
+        }],
+        "dt": 1485907200,
+        "dt_iso": "2017-01-01 00:00:00 +0000 UTC"
+    }],
+    "id": 725712,
+    "info": "Vratsa is a city in northwestern Bulgaria, at the foothills of the Balkan Mountains. It is the administrative centre of the homonymous Vratsa Province. The city of Vratsa is a commercial and crafts centre and a railway junction. Vratsa accommodates textile, metal processing, chemical, and ceramics industries. Vratsa is an ancient city found by ancient Thracians. Vratsa was called Valve (\"door of a fortress\") by the Romans due to a narrow passage where the main gate of the city fortress was located. Nowadays, this passage is the symbol of Vratsa, and is shown on the town's Coat of arms.",
+    "mountain": true,
+    "beach": false,
+    "culture": true,
+    "places": [{
+            "name": "Botev monument"
+        },
+        {
+            "name": "Rogozen treasure"
+        },
+        {
+            "name": "Vratsata pass"
+        },
+        {
+            "name": "Meshchiite tower"
+        },
+        {
+            "name": "Botev memorial"
+        },
+        {
+            "name": "Ledenica cave"
+        }
+    ]
+}
