@@ -67,11 +67,49 @@
         </div>
     </div>
 
-    <div class="index container">
-        <object src="../styles/images/weather-icons/01d.svg" type="image/svg+xml"></object>
+    <div class="index container-first">
+        <!-- <object src="../styles/images/weather-icons/01d.svg" type="image/svg+xml"></object> -->
 
-        <div id="top" class="row align-items-start" style="height:500px;">
-            <div id="slideshow" class="col-xs-12" style="height:450px;"> </div>
+        <div id="container" class="container" style="padding-top: 24px !important; padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px;">
+            <h1>Weather tour</h1>
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li class="item1 active"></li>
+                    <li class="item2"></li>
+                    <li class="item3"></li>
+                    <li class="item4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="../styles/images/slideshow/London.jpg" alt="London">
+                    </div>
+
+                    <div class="item">
+                        <img src="../styles/images/slideshow/Berlin.jpg" alt="Berlin">
+                    </div>
+
+                    <div class="item">
+                        <img src="../styles/images/slideshow/Madrid.jpg" alt="Madrid">
+                    </div>
+
+                    <div class="item">
+                        <img src="../styles/images/slideshow/Berlin.jpg" alt="Berlin">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
 
         <div id="partOne" class="row">
@@ -123,8 +161,7 @@
                     </ol>
 
                     <label for="addInput" id="labelFavCity">
-                        <input type="text" class="form-control" 
-                        id="addInput" placeholder="Enter city name">
+                        <input type="text" class="form-control" id="addInput" placeholder="Enter city name">
                         <button type="button" id="addFav" class="btn btn-primary">Add new city</button>
                     </label>
                 </div>
@@ -189,6 +226,8 @@
     </div>
 
     <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/slideshow.js"></script>
+    <!-- C:\Users\atama\Desktop\Front-End-Project\TelerikWeatherSPA\styles\css\slideshow.css -->
     <script src="../scripts/database/data-base-load-json.js"></script>
     <script src="../scripts/manage-admin-views.js"></script>
     <script src="../scripts/profile-table/add-fav-city.js"></script>

@@ -217,3 +217,9 @@ ol {
 #city-info {
     overflow: auto;
 }
+
+h1 {
+    text-align: center;
+    background: rgba(34, 34, 34, 0.25);
+    padding-bottom: 0px;
+}
