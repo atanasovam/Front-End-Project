@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="../styles/css/styles.css" rel="stylesheet">
+    <link href="../styles/css/main-containers-index-page.css" rel="stylesheet">
     <link href="../styles/css/checkbox-style.css" rel="stylesheet">
     <link href="../styles/css/weather-display.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -70,7 +71,9 @@
     <div class="index container-first">
 
         <div id="container" style="width: 100%; padding-top: 24px !important; padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px;">
-            <h1 class="site-title">Weather tour</h1>
+            <h1 class="site-title">
+                <strong>Weather tour</strong>
+            </h1>
             <div id="myCarousel" class="carousel slide">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -81,21 +84,21 @@
                 </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox" style="height: 390px;">
                     <div class="item active">
                         <img src="../styles/images/slideshow/London.jpg" alt="London">
                     </div>
 
                     <div class="item">
-                        <img src="../styles/images/slideshow/Berlin.jpg" alt="Berlin">
+                        <img src="../styles/images/slideshow/Madrid.jpg" alt="Berlin">
                     </div>
 
                     <div class="item">
-                        <img src="../styles/images/slideshow/Madrid.jpg" alt="Madrid">
+                        <img src="../styles/images/slideshow/London.jpg" alt="Madrid">
                     </div>
 
                     <div class="item">
-                        <img src="../styles/images/slideshow/Berlin.jpg" alt="Berlin">
+                        <img src="../styles/images/slideshow/Madrid.jpg" alt="Berlin">
                     </div>
                 </div>
 
@@ -109,6 +112,8 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+
+            <div id="about-part" class="row"> </div>
         </div>
 
         <div id="partOne" class="row">
@@ -125,8 +130,6 @@
             <p>Admin part</p>
 
         </div> -->
-
-        <div id="about-part" class="row"> </div>
 
         <div id="footer" class="row"> </div>
 

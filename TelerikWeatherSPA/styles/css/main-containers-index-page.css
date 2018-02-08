@@ -1,0 +1,16 @@
+#about-part {
+    background: #d4d8d8;
+}
+
+#partOne {
+    background: white;
+}
+
+#partTwo {
+    background: whitesmoke;
+}
+
+.nav,
+.navbar-collapse {
+    background: whitesmoke !important;
+}
