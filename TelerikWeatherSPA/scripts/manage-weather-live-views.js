@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
 var showCurrentWeather = (function (city, jsonWeather) {
 
     var temperatureCelsius = convertTemp(jsonWeather.main.temp) + "&deg;C";
-    var iconUrl = "../../styles/images/weather-icons/" + jsonWeather.weather[0].icon + ".svg";
+    var iconUrl = "../styles/images/weather-icons/" + jsonWeather.weather[0].icon + ".svg";
     var thatDay = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
     $(".date").html(thatDay);
     $("#city-name").html(city);

@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
         var changePlacesImg = function (cityHistory) {
             var i = 0;
             var time = 3000;
-            var cityImgUrl1 = "../../styles/images/cities/" + cityHistory.id + "/";
+            var cityImgUrl1 = "../styles/images/cities/" + cityHistory.id + "/";
             var len = cityHistory.places.length;
             var currCity = cityHistory.name;
 
@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
 
             var cityHistory = destination(cityId).getDataCity();
 
-            var cityImgUrl = "../../styles/images/cities/" + cityHistory.id + "/";
+            var cityImgUrl = "../styles/images/cities/" + cityHistory.id + "/";
             $("#places").attr("name", cityHistory.name);
             $("#photo").find("img").attr("src", cityImgUrl + "main.jpg");
             $("#city-info p").first().html(cityHistory.info);
