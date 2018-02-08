@@ -1,5 +1,5 @@
-jQuery(document).ready(function ($) {
-    var showProfilePage = function () {
+jQuery(document).ready(function($) {
+    var showProfilePage = function() {
         $('.last-searched').addClass('hidden');
         $('.next-trip-places').addClass('hidden');
         $('.select-dest-type').addClass('hidden');
@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
         $('.last-searched .next-trip-places .select-dest-type').addClass('hidden');
     };
 
-    var hideProfilePage = function () {
+    var hideProfilePage = function() {
         $('log-in').addClass('hidden');
         $('.profile-page')
             .addClass('hidden');
@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
             .removeClass('hidden');
     };
 
-    var showLogInForm = function () {
+    var showLogInForm = function() {
         var login = function () {
             var email = $('#email').val().trim();
             var pass = $('#password').val().trim();
@@ -63,14 +63,14 @@ jQuery(document).ready(function ($) {
         $('#log-user').on('click', login);
     };
 
-    var logout = function () {
+    var logout = function() {
         hideProfilePage();
         $('#logged').text('');
         $('#sign-up').text('Sign up');
         $('#sign-out').text('');
     };
 
-    var manageGreetings = function () {
+    var manageGreetings = function() {
         $('.index').addClass('hidden');
         $('.log-in').addClass('hidden');
         $('.profile-page').removeClass('hidden');

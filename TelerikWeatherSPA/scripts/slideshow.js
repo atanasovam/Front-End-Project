@@ -1,25 +1,25 @@
-$(document).ready(function () {
-    var directions = (function () {
+$(document).ready(function() {
+    var directions = (function() {
         $("#myCarousel").carousel({ interval: 2500 });
 
-        $(".item1").click(function () {
+        $(".item1").click(function() {
             $("#myCarousel").carousel(0);
         });
-        $(".item2").click(function () {
+        $(".item2").click(function() {
             $("#myCarousel").carousel(1);
         });
-        $(".item3").click(function () {
+        $(".item3").click(function() {
             $("#myCarousel").carousel(2);
         });
-        $(".item4").click(function () {
+        $(".item4").click(function() {
             $("#myCarousel").carousel(3);
         });
 
         // Enable Carousel Controls
-        $(".left").click(function () {
+        $(".left").click(function() {
             $("#myCarousel").carousel("prev");
         });
-        $(".right").click(function () {
+        $(".right").click(function() {
             $("#myCarousel").carousel("next");
         });
     })();

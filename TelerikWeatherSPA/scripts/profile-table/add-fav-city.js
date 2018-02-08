@@ -1,6 +1,6 @@
 var cityArr = [];
 
-var makeDeleteButton = (function () {
+var makeDeleteButton = (function() {
     return $('<button>')
         .attr('class', 'cityToAdd')
         .attr('type', 'button')
@@ -9,7 +9,7 @@ var makeDeleteButton = (function () {
 
 $('#labelFavCity').append(makeDeleteButton);
 
-$('#addFav').on('click', function () {
+$('#addFav').on('click', function() {
     var cityToAdd = $('#addInput').val();
     cityArr.push(cityToAdd);
 
@@ -22,7 +22,7 @@ $('#addFav').on('click', function () {
 
     $('#addInput').val('');
 
-    $('.cityToAdd').on('click', function () {
+    $('.cityToAdd').on('click', function() {
         $('.fav-places-ol')
             .children()
             .addClass('hidden');

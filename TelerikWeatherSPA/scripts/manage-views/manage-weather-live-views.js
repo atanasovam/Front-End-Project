@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
 
     var $dataContainer = $("<div>").attr("id", "weather-box")
         .append($("<p/>").addClass("w-50 date"))
@@ -13,11 +13,12 @@ jQuery(document).ready(function ($) {
 });
 
 
-var showCurrentWeather = (function (city, jsonWeather) {
+var showCurrentWeather = (function(city, jsonWeather) {
 
     var temperatureCelsius = convertTemp(jsonWeather.main.temp) + "&deg;C";
     var iconUrl = "../styles/images/weather-icons/" + jsonWeather.weather[0].icon + ".svg";
     var thatDay = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
+
     $(".date").html(thatDay);
     $("#city-name").html(city);
     $("#city-tempC").html(temperatureCelsius);
@@ -30,5 +31,4 @@ var showCurrentWeather = (function (city, jsonWeather) {
     } else {
         weatherBox.css("fontSize", "100%");
     }
-
 });
