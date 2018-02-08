@@ -2,15 +2,13 @@
     background: #d4d8d8;
 }
 
-#partOne {
+#partOne,
+#partTwo {
     background: white;
 }
 
-#partTwo {
-    background: whitesmoke;
-}
-
 .nav,
-.navbar-collapse {
+.navbar-collapse,
+#footer {
     background: whitesmoke !important;
 }
