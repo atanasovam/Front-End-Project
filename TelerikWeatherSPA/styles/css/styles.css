@@ -12,6 +12,7 @@
     width: 100%;
 }
 
+
 /* Navbar */
 
 #navbar {
@@ -39,6 +40,7 @@
     z-index: 1;
 }
 
+
 /* Body */
 
 body {
@@ -49,7 +51,7 @@ body::after {
     pointer-events: none;
     background-size: 100%;
     content: "";
-    background-image: url(../images/background-japan.jpg);
+    background-image: url(../images/background.jpg);
     top: 0;
     left: 0;
     bottom: 0;
@@ -74,6 +76,7 @@ ul,
 ol {
     list-style-type: none;
 }
+
 
 /* Profile page */
 
@@ -101,6 +104,7 @@ ol {
     padding-top: 5px;
 }
 
+
 /* @media only sreen and (max-width: 1048px) {
 
 } */
@@ -117,11 +121,45 @@ ol {
     }
 }
 
+
 /* Login form */
 
 .log-in {
     padding-top: 150px;
+    margin-right: 45%;
     display: block;
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 1400px) {
+    .log-in {
+        width: 100%;
+        margin-left: 300px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .log-in {
+        margin-left: 525px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .log-in {
+        margin-left: 155px;
+    }
+}
+
+@media only screen and (max-width: 677px) {
+    .log-in {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .log-in {
+        margin-left: 50px;
+    }
 }
 
 .max-width-100-height-auto {
@@ -165,11 +203,14 @@ ol {
     font-size: 2em;
 }
 
-#photo, #places, #city-info {
+#photo,
+#places,
+#city-info {
     max-height: 30vh;
 }
 
-#photo, #places {
+#photo,
+#places {
     overflow: hidden;
 }
 
