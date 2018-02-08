@@ -163,7 +163,8 @@ ol {
     }
 }
 
-.max-width-100-height-auto {
+.max-width-100-height-auto,
+.item {
     max-width: 100%;
     height: auto;
 }
@@ -219,8 +220,10 @@ ol {
     overflow: auto;
 }
 
-h1 {
+.site-title {
     text-align: center;
     background: rgba(34, 34, 34, 0.25);
     padding-bottom: 0px;
+    margin-top: 11px;
+    margin-bottom: 0px;
 }

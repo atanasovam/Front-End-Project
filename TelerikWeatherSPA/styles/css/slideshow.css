@@ -71,7 +71,13 @@
     width: 1200px;
     padding-right: 15px !important;
     padding-left: 15px !important;
-    /* margin-right: auto !important;
-    margin-left: auto !important; */
     padding-top: 24px !important;
+}
+
+.item {
+    overflow: hidden;
+}
+
+#container {
+    /* height: 250px; */
 }
