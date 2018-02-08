@@ -67,11 +67,11 @@
     background: rgba(34, 34, 34, 0.25);
 }
 
-
 #container {
-        padding-right: 15px !important;
-        padding-left: 15px !important;
-        margin-right: auto !important;
-        margin-left: auto !important;
-        padding-top: 24px !important;
-    }
+    width: 1200px;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    /* margin-right: auto !important;
+    margin-left: auto !important; */
+    padding-top: 24px !important;
+}
