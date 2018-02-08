@@ -23,16 +23,29 @@ jQuery(document).ready(function ($) {
             var email = $('#email').val().trim();
             var pass = $('#password').val().trim();
 
-            // var rgx = new RegExp(/(\S+)@(\S+)\.(\S+)/, 'g');
-            var isAdmin = email === 'admin@ad.com' && pass === 'admin';
-            var isValidUser = email.length > 6 && pass.length > 6;
-            // debugger
+            var rgx = new RegExp(/(\S+)@(\S+)\.(\S+)/, 'g');
+
+            var isAdmin = email === 'admin@email.com' && pass === 'admin';
+            var isValidUser = rgx.test(email) && pass.length >= 6;
+
             var loginButton = $('#sign-up');
             var logoutButton = $('#sign-out');
             var greetings = $('#logged');
-            if (isAdmin) {
-                // showControlPanel();
-                // alert('admin')
+
+            if (!isAdmin && !isValidUser) {
+                hideProfilePage();
+                // debugger;
+                $('.log-in').addClass('hidden');
+                // alert('Invalid password/ email!');
+
+                $('#email').val('');
+                $('#password').val('');
+            } else if (isAdmin) {
+                var loginButton2 = $('#adminButton');
+
+                window.open("./admin.html");
+
+                alert('admin');
             } else if (isValidUser) {
                 showProfilePage();
 
@@ -42,14 +55,6 @@ jQuery(document).ready(function ($) {
                 greetings.text('Hello, user!');
                 loginButton.text('');
                 logoutButton.text('Sign out');
-            } else {
-                // hideProfilePage();
-
-                // greetings.text('');
-                // loginButton.text('Sign up');
-                // logoutButton.text('');
-
-                // alert('Invalid tokens!');
             }
         };
 
