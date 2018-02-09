@@ -21,30 +21,31 @@
     height: 100%;
 }
 
-.w-50 {
-    width: 50%;
-    padding-top: 10px;
-    display: inline-block;
-}
-
 #icon img {
     width: 37%;
 }
 
 .right {
     text-align: right;
-    font-size: 1.4em;
+    font-size: 2em;
 }
 
 .date {
     text-align: left;
+    font-size: 1.7em;
+}
+
+.hour {
+    text-align: left;
+    font-size: 2.3em;
+    font-weight: bolder;
 }
 
 #city-name {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 #city-tempC {
-    font-size: 8em;
+    font-size: 7.5em;
     font-weight: bold;
 }
