@@ -1,14 +1,13 @@
-#about-part {
-    background: #d4d8d8;
+#partTwo {
+    color: white;
 }
 
 #partOne,
-#partTwo {
+#about-part {
     background: white;
 }
 
 .nav,
-.navbar-collapse,
-#footer {
+.navbar-collapse {
     background: whitesmoke !important;
 }

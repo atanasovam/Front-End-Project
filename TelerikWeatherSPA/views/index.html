@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <a href="#top">
-                            <img src="../styles/images/logo.png" width="30%">
+                            <img src="../styles/images/logo.png" width="33%">
                         </a>
                     </div>
                     <div class="col-sm-9">
@@ -84,7 +84,7 @@
                 </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox" style="height: 390px;">
+                <div class="carousel-inner" role="listbox" style="height: 490px;">
                     <div class="item active">
                         <img src="../styles/images/slideshow/London.jpg" alt="London">
                     </div>
@@ -103,17 +103,16 @@
                 </div>
 
                 <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" role="button">
+                <!-- <a class="left carousel-control" href="#myCarousel" role="button">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="right carousel-control" href="#myCarousel" role="button">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>
+                </a> -->
             </div>
 
-            <div id="about-part" class="row"> </div>
         </div>
 
         <div id="partOne" class="row">
@@ -122,14 +121,12 @@
             <div id="weather-live" class="col-xs-6"></div>
 
         </div>
-        <!-- <a id="adminButton" href="./admin.html">log</a> -->
 
-        <div id="partTwo" class="row align-items-center">
+        <div id="partTwo" class="row align-items-center hidden">
         </div>
+        <div id="about-part" class="row"> </div>
 
-        <div id="footer" class="row">
-
-        </div>
+        <div id="footer" class="row"> </div>
 
     </div>
 
@@ -245,8 +242,9 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0HeNhdqO0V6nJXW7CYQ28QoUQhUYqkYc&callback=initMap"
         type="text/javascript"></script>
 
-    <script src="../scripts/functionality/load-history.js"></script>
-    <script src="../scripts/functionality/load-project-and-contact-info.js"></script>
+    <script src="../scripts/load-info/load-project-intro.js"></script>
+    <script src="../scripts/load-info/load-history.js"></script>
+    <script src="../scripts/load-info/load-project-and-contact-info.js"></script>
 </body>
 
 </html>

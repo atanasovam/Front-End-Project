@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     var $box = $("<div/>");
 
     var $photo = $("<div/>")
@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
         .attr("id", "photo")
         .append($("<img/>")
             .addClass("max-width-100-height-auto"));
-
 
     var $info = $("<div/>")
         .addClass("col-xs-4")
@@ -27,7 +26,7 @@ jQuery(document).ready(function($) {
     $("#partTwo").html($box.html());
 });
 
-var changePlacesImg = function(cityHistory) {
+var changePlacesImg = function (cityHistory) {
     var i = 0;
     var time = 3000;
     var cityImgUrl1 = "../styles/images/cities/" + cityHistory.id + "/";
@@ -41,14 +40,15 @@ var changePlacesImg = function(cityHistory) {
         $("#places p").first().html(cityHistory.places[i % len].name);
         $("#places img").first().attr("src", cityImgUrl1 + i % len + ".jpg");
         i += 1;
-        setTimeout(function() {
+        setTimeout(function () {
             changeImg();
         }, time);
     }
     changeImg();
+    $('#partTwo').removeClass('hidden');
 };
 
-var showHistoryPanel = function(cityId) {
+var showHistoryPanel = function (cityId) {
     var cityHistory = destination(cityId).getDataCity();
     var cityImgUrl = "../styles/images/cities/" + cityHistory.id + "/";
 
@@ -58,3 +58,5 @@ var showHistoryPanel = function(cityId) {
 
     changePlacesImg(cityHistory);
 };
+
+
