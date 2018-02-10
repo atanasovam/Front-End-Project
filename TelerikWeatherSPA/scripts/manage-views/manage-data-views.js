@@ -2,56 +2,61 @@ var dataPlaces;
 var dataAverageTemp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var d3 = Plotly.d3;
+var layout = {
     
-    var WIDTH_IN_PERCENT_OF_PARENT = 80,
-        HEIGHT_IN_PERCENT_OF_PARENT = 80;
+     title: 'Average Temperature',
+     font: {
+        family: 'Courier New',
+        size: 15,
+        color: 'black', 
+        weight: 900
+      },
+     yaxis: {
+         showgrid: false
+     },
+     margin: {
+         l: 20,
+         r: 0,
+         b: 30,
+         t: 30,
+         pad: 0
+       },
+     paper_bgcolor: 'rgba(0,0,0,0)',
+     plot_bgcolor: 'white',
+ }
     
-    var gd3 = d3.select('#data-plot')
-        .append('div')
-        .style({
-            width: WIDTH_IN_PERCENT_OF_PARENT + '%',
+var WIDTH_IN_PERCENT_OF_PARENT = 80,
+ HEIGHT_IN_PERCENT_OF_PARENT = 80;
+    
+var gd3 = d3.select('#data-plot')
+    .append('div')
+    .style({
+        width: WIDTH_IN_PERCENT_OF_PARENT + '%',
             // 'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
             // 'margin-left': '10%',
-            height: HEIGHT_IN_PERCENT_OF_PARENT + '%',
-            'margin-top':'5%',
-            'margin-bottom':'10%'
-        });
+        height: HEIGHT_IN_PERCENT_OF_PARENT + '%',
+        'margin-top':'2%',
+        'margin-bottom':'10%'
+    });
     
-    var gd = gd3.node();
+var gd = gd3.node();
+   
     
-    Plotly.plot(gd, [{
-        type: 'bar',
-        x: monthNames,
-        y: dataAverageTemp,
-        marker: {
-            color: '#001f33',
-            line: {
-                width: 1
-            }
+Plotly.plot(gd, [{
+    type: 'bar',
+    x: monthNames,
+    y: dataAverageTemp,
+    marker: {
+        color: '#001f33',
+        line: {
+            width: 1
         }
-    }], {
-       
-        title: 'Average Temperature',
-        font: {
-            size: 10
-        }, 
-        yaxis: {
-            showgrid: false
-        },
-        margin: {
-            l: 20,
-            r: 0,
-            b: 20,
-            t: 20,
-            pad: 5
-          },
-        paper_bgcolor: 'rgba(0,0,0,0)',
-        plot_bgcolor: 'white',
-    },  {displayModeBar: false});
+    }
+}], layout,  {displayModeBar: false});
     
-    window.onresize = function() {
-        Plotly.Plots.resize(gd);
-    };
+window.onresize = function() {
+    Plotly.Plots.resize(gd);
+};
     
 
 
@@ -63,10 +68,10 @@ $( "#form-data-submit" ).on('click', function( event ) {
         day = date.getDate();
         month = date.getMonth() + 1;
         year = date.getFullYear();
-        alert([month, year].join('/'));
+        //alert([month, year].join('/'));
         
-        console.log(day)
-    event.preventDefault();
+       // console.log(day)
+        event.preventDefault();
         
     //var dataPage = "List_of_cities_by_temperature";
     //data = $.getJSON("https://en.wikipedia.org/w/api.php?action=query&titles="  + dataPage +"&prop=revisions&rvprop=content&format=json&origin=*&formatversion=2")
@@ -114,6 +119,7 @@ $( "#form-data-submit" ).on('click', function( event ) {
        }
        gd.data[0].x = monthNames;
        gd.data[0].y = dataAverageTemp;
-       Plotly.redraw(gd)
+       layout.title ='Average monthly temperature in '  + place;
+       Plotly.redraw(gd, layout)
 
 });

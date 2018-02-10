@@ -59,7 +59,9 @@ ol {
 .select-profile-choises {
     padding-top: 5px;
 }
-
+#form-data {
+    padding:10%;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 140000px) {
     #navbar img {
@@ -191,7 +193,10 @@ ol {
 #city-info {
     overflow: auto;
 }
-
+#data-part {
+    background-color: #A7B1B6; 
+    overflow: hidden;
+}
 @media only screen and (min-width: 768px) and (max-width: 140000px) {
 
 }
@@ -208,11 +213,16 @@ ol {
         height: 35vh;
         background-color: #2A3E59;
         padding: 15px;
-        padding-bottom:0px;
+        /* padding-bottom:0px; */
     }
     #partTwo {
         background-color: white;
         margin-bottom: 20px; 
+    }
+    
+    #data-part {
+        height: 30vh;
+        background-color: #A7B1B6; 
     }
 }
 
@@ -234,7 +244,4 @@ h1,
 h2,
 h3 {
     margin-bottom: 15px !important;
-}
-#data-part {
-    background-color: #A7B1B6; 
 }
