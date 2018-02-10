@@ -24,7 +24,11 @@ var showCurrentWeather = (function (city, jsonWeather) {
     var months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
     var now = new Date();
     var thatDay = now.getDay() + " " + months[now.getMonth()];
-    var thatHour = now.getHours() + ":" + now.getMinutes();
+    var minutes = now.getMinutes();
+    if (minutes.toString().length === 1) {
+        minutes = "0" + minutes;
+    }
+    var thatHour = now.getHours() + ":" + minutes;
     $(".date").html(thatDay);
     $(".hour").html(thatHour);
     $("#city-name").html(city);

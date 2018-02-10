@@ -6,12 +6,6 @@
     font-weight: 900;
 }
 
-.index {
-    width: 100%;
-    background: #a7b1b6;
-}
-
-
 /* Navbar */
 
 #navbar {
@@ -29,7 +23,7 @@
 }
 
 .container-first {
-    /* height: 100%; */
+    width: 100%;
     padding: 0px;
     margin: 0px;
 }
@@ -83,8 +77,8 @@ ol {
         text-align: center;
         padding-top: 290px;
     }
-    .col-sm-6,
-    .col-sm-offset-3,
+    .log-in .col-sm-6,
+    .log-in .col-sm-offset-3,
     .log-in {
         padding-top: 190px;
     }
@@ -138,16 +132,15 @@ ol {
 }
 
 #about-part,
-#footer,
-#partOne {
+#footer {
     /* height: 50vh; */
     width: 100%;
     padding: 10px 20px;
 }
 
 #container,
-#partTwo {
-    background: #2A3E59;
+#review, #partTwo {
+    background-color: #2A3E59;
 }
 
 #footer {
@@ -159,17 +152,6 @@ ol {
     height: 50vh;
     width: 100%;
     padding: 10px 5px;
-    color: white;
-}
-
-.info {
-    color: white;
-    height: 29vh;
-    text-align: center;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
 }
 
 #about-part>p,
@@ -197,7 +179,8 @@ ol {
 #photo,
 #places,
 #city-info {
-    max-height: 30vh;
+    height: 25vh;
+    color: white;
 }
 
 #photo,
@@ -207,6 +190,30 @@ ol {
 
 #city-info {
     overflow: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 140000px) {
+
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+    #city-info  {
+        height: auto;
+        max-height: 25vh;
+        background-color: #2A3E59; 
+        padding: 15px;
+    }
+    #photo,
+    #places {
+        height: 35vh;
+        background-color: #2A3E59;
+        padding: 15px;
+        padding-bottom:0px;
+    }
+    #partTwo {
+        background-color: white;
+        margin-bottom: 20px; 
+    }
 }
 
 .site-title,
@@ -220,10 +227,6 @@ h1 {
     margin-bottom: 0px !important;
 }
 
-.row {
-    margin-left: 0px !important;
-}
-
 .h1,
 .h2,
 .h3,
@@ -232,7 +235,6 @@ h2,
 h3 {
     margin-bottom: 15px !important;
 }
-
-#partTwo {
-    color: black;
+#data-part {
+    background-color: #A7B1B6; 
 }

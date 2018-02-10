@@ -32,11 +32,12 @@ function initMap() {
 
                 for (i in json.results) {
                     for (k in json.results[i].address_components) {
-                        if ("locality" === json.results[i].address_components[k].types[0]) {
+                        if ("locality" === json.results[i].address_components[k].types[0] && i>=2) {
                             cityName = json.results[i].address_components[k].long_name
 
                             appendLastSearched(cityName);
                             requestForecast(cityName);
+                            $( "#destination-input" ).val(cityName);
                             return;
                         }
                     }
