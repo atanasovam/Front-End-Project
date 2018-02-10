@@ -144,6 +144,9 @@ ol {
 #review, #partTwo {
     background-color: #2A3E59;
 }
+#review {
+    height: auto;
+}
 
 #footer {
     background: #2A3E59;
@@ -151,7 +154,6 @@ ol {
 }
 
 #partTwo {
-    height: 50vh;
     width: 100%;
     padding: 10px 5px;
 }
@@ -181,7 +183,6 @@ ol {
 #photo,
 #places,
 #city-info {
-    height: 25vh;
     color: white;
 }
 
@@ -197,10 +198,25 @@ ol {
     background-color: #A7B1B6; 
     overflow: hidden;
 }
-@media only screen and (min-width: 768px) and (max-width: 140000px) {
-
+@media only screen and (min-width: 1200px) and (max-width: 140000px) {
+    #photo,
+    #places,
+    #city-info {
+        height: 40vh;
+    }
+    #partTwo {
+        height: 42vh;
+    }
+    
 }
-
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    #photo,
+    #places,
+    #city-info, #partTwo {
+        height: 30vh;
+    }
+    
+}
 @media only screen and (min-width: 1px) and (max-width: 767px) {
     #city-info  {
         height: auto;
@@ -216,6 +232,7 @@ ol {
         /* padding-bottom:0px; */
     }
     #partTwo {
+        height: 35vh;
         background-color: white;
         margin-bottom: 20px; 
     }
