@@ -26,7 +26,7 @@ var showCurrentWeather = (function (city, jsonWeather) {
     var thatDay = now.getDay() + " " + months[now.getMonth()];
     var minutes = now.getMinutes();
     if (minutes.toString().length === 1) {
-        minutes.padStart(2,"0");
+        minutes = "0" + minutes;
     }
     var thatHour = now.getHours() + ":" + minutes;
     $(".date").html(thatDay);

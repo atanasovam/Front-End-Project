@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
-    var $box = $("<div/>");
+    var $box = $("<div/>")
+    .attr("id", "review");
 
     var $photo = $("<div/>")
         .addClass("col-sm-4 col-xs-12")
@@ -23,7 +24,7 @@ jQuery(document).ready(function ($) {
         .append($info)
         .append($places);
 
-    $("#partTwo").html($box.html());
+    $("#partTwo").html($box);
 });
 
 var changePlacesImg = function (cityHistory) {

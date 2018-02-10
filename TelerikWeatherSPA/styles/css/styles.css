@@ -139,8 +139,8 @@ ol {
 }
 
 #container,
-#partTwo {
-    background: #2A3E59;
+#review, #partTwo {
+    background-color: #2A3E59;
 }
 
 #footer {
@@ -200,12 +200,19 @@ ol {
     #city-info  {
         height: auto;
         max-height: 25vh;
+        background-color: #2A3E59; 
+        padding: 15px;
     }
     #photo,
     #places {
         height: 35vh;
+        background-color: #2A3E59;
+        padding: 15px;
     }
-
+    #partTwo {
+        background-color: white;
+        margin-bottom: 20px; 
+    }
 }
 
 .site-title,
