@@ -19,43 +19,13 @@
     font-family: Helvetica;
     font-size: 140%;
     font-weight: 700;
-    color: white;
-    background: white;
-    height: auto;
-    white-space: nowrap;
-    border: black;
-    border-bottom-color: black;
+    background:  whitesmoke;
+    padding: 10px 0px 10px 0px;
 }
 
 #navbar a {
     text-decoration: none;
     color: black;
-}
-
-.sticky-top {
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-/* Body */
-
-/* body {
-    position: absolute;
-} */
-
-body::after {
-    pointer-events: none;
-    background-size: 100%;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    /* background-repeat: r; */
-    position: fixed;
-    z-index: -1;
-    opacity: 0.6;
 }
 
 .container-first {
@@ -84,9 +54,6 @@ ol {
     padding-top: 70px;
 }
 
-.nav-tabs.nav-justified>li>a {
-    color: black !important;
-}
 
 .fav-places,
 .last-searched,
@@ -249,7 +216,7 @@ h1 {
     /* background: white; */
     color: white;
     padding-bottom: 0px;
-    margin-top: 11px;
+    margin-top: 0px;
     margin-bottom: 0px !important;
 }
 
