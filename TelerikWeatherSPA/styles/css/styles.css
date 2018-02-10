@@ -208,6 +208,7 @@ ol {
         height: 35vh;
         background-color: #2A3E59;
         padding: 15px;
+        padding-bottom:0px;
     }
     #partTwo {
         background-color: white;
@@ -234,4 +235,6 @@ h2,
 h3 {
     margin-bottom: 15px !important;
 }
-
+#data-part {
+    background-color: #A7B1B6; 
+}

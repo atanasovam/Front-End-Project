@@ -77,3 +77,11 @@
     font-size: 7.5em;
     font-weight: bold;
 }
+
+
+#data-part {
+    height: 40vh; 
+} 
+#data-plot {
+    height: 100%;
+}

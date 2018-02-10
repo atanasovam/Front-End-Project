@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script> -->
 
@@ -117,6 +118,46 @@
         </div>
 
         <div id="partTwo" class="align-items-center hidden">
+        </div>
+        <div id="data-part" class="row align-items-center">
+                    <div style="overflow:hidden;">
+                        
+                            <div class="row">
+                                
+                                <div class="col-md-8" id = "data-plot">
+            
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <form id="form-data">                        
+                                        <div class="form-group">
+                                            <label for="destination-input">Choose your destination or find it on the map</label> <br>
+                                            <div class="input-group">
+                                                
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </span>
+                                                
+                                                <input type="text" id="destination-input"  name = "destination" class="form-control" placeholder="Search"/>
+                                            </div> 
+                                            <label for="date-input">When do you want to travel? </label><br>
+                                            <div class="input-group">
+                                            
+                                                <span class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-calendar"></i>
+                                                    </span>
+                                                <input type="month" id="date-input"  name = "date-input" class="form-control" />
+                                            </div> 
+                                        </div>
+                            
+                                    </form>
+                                    <button type='button' form="form-data" id = "form-data-submit" value="Submit">Submit</button>
+                                </div>
+                        </div>
+                    
+                    
+                </div>
         </div>
         <div id="about-part"> </div>
 
@@ -225,6 +266,7 @@
 
     <script src="../scripts/manage-views/manage-weather-live-views.js"></script>
     <script src="../scripts/manage-views/manage-main-views.js"></script>
+    <script src="../scripts/manage-views/manage-data-views.js"></script>
     <script src="../scripts/profile-table/manage-profile-table.js"></script>
 
     <script src="../scripts/database/data-base-load-json.js"></script>
