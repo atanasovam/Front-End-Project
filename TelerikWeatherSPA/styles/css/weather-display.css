@@ -2,14 +2,11 @@
     margin: 15px 0px; 
 }
 
-#map {
-    background: white;
-}
 @media only screen and (min-width: 768px) and (max-width: 140000px) {
     #partOne {
         height: 50vh;
         margin-left: 20px;
-     }
+         }
      #map, #weather-live {
         height: 100%;
     }
@@ -25,13 +22,12 @@
 @media only screen and (min-width: 1px) and (max-width: 767px) {
     #partOne {
         height: auto; 
+        background: white;
      }
      #map {
         height: 50vh;
-        width: 97%;
-        margin-right: 30px;
-        margin-left: 15px;
-        margin-bottom: 15px;
+        width: 95%;
+        margin: 0px 15px 15px 15px;
     }
     #weather-live {
         height: auto;
@@ -40,10 +36,9 @@
     #weather-box {
         height: auto;
     }
-    #weather-live.col-sm-6.col-xs-12 {
+    /* #weather-live.col-sm-6.col-xs-12 {
         padding-right: 5px;
-    }
-    
+    } */
 }
 
 #weather-box {

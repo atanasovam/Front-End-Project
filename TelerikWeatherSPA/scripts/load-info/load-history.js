@@ -2,18 +2,18 @@ jQuery(document).ready(function ($) {
     var $box = $("<div/>");
 
     var $photo = $("<div/>")
-        .addClass("col-xs-4")
+        .addClass("col-sm-4 col-xs-12")
         .attr("id", "photo")
         .append($("<img/>")
             .addClass("max-width-100-height-auto"));
 
     var $info = $("<div/>")
-        .addClass("col-xs-4")
+        .addClass("col-sm-4 col-xs-12")
         .attr("id", "city-info")
         .append($("<p/>"));
 
     var $places = $("<div/>")
-        .addClass("col-xs-4")
+        .addClass("col-sm-4 col-xs-12")
         .attr("id", "places")
         .append($("<p/>"))
         .append($("<img/>")
