@@ -1,17 +1,23 @@
-.row.mainDivIntro {
-    height: 30vh;
-    padding-top: 60px;
-    font-size: 2em;
-    margin-left: 100px !important;
-    /* background-color: white; */
+#container {
+    vertical-align: middle;
 }
 
+.carousel-inner {
+    height: 60vh;
+}
+.mainDivIntro {
+    height: 25vh;
+    color: white;
+}
+
+.mainDivIntro div {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
 .triangle {
     width: 0;
     height: 0;
-    border-top: 60px solid transparent;
-    border-left: 120px solid white;
-    border-bottom: 60px solid transparent;
     opacity: 0.6;
 }
 
@@ -19,7 +25,47 @@
     opacity: 1;
 }
 
-.intro {
-    padding-top: 35px;
-    margin-right: 10px;
+@media only screen and (min-width: 1200px) and (max-width: 140000px) {
+    .mainDivIntro {
+        font-size: 2.5em;
+        padding-top: 40px;
+    }
+    .triangle {
+        border-top: 60px solid transparent;
+        border-left: 120px solid white;
+        border-bottom: 60px solid transparent;
+    }
+    .text {
+        padding: 0px 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .mainDivIntro {
+        font-size: 2em;
+        padding-top: 30px;
+    }
+    .triangle {
+        border-top: 50px solid transparent;
+        border-left: 100px solid white;
+        border-bottom: 50px solid transparent;
+    }
+    .text {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+    .mainDivIntro {
+        font-size: 1.5em;
+        padding-top: 20px;
+    }
+    .triangle {
+        border-top: 40px solid transparent;
+        border-left: 80px solid white;
+        border-bottom: 40px solid transparent;
+    }
+    .text {
+        padding: 0px 5px;
+    }
 }

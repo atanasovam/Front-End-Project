@@ -48,7 +48,6 @@ ol {
     padding-top: 70px;
 }
 
-
 .fav-places,
 .last-searched,
 .next-trip-places {
@@ -85,7 +84,6 @@ ol {
         padding-top: 190px;
     }
 }
-
 
 /* Login form */
 
@@ -135,7 +133,6 @@ ol {
 
 #about-part,
 #footer {
-    /* height: 50vh; */
     width: 100%;
     padding: 10px 20px;
 }
@@ -212,8 +209,11 @@ ol {
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
     #photo,
     #places,
-    #city-info, #partTwo {
+    #city-info {
         height: 30vh;
+    }
+    #partTwo {
+        height: 32vh;
     }
     
 }
@@ -226,20 +226,20 @@ ol {
     }
     #photo,
     #places {
-        height: 35vh;
+        height: auto;
+        max-height: 40vh;
         background-color: #2A3E59;
         padding: 15px;
         /* padding-bottom:0px; */
     }
     #partTwo {
-        height: 35vh;
+        height: auto;
         background-color: white;
         margin-bottom: 20px; 
     }
     
     #data-part {
         height: 30vh;
-        background-color: #A7B1B6; 
     }
 }
 
