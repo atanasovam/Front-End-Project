@@ -1,10 +1,36 @@
 $(document).ready((function () {
-    var info = $('<div>')
-        .addClass('info')
-        .append('<p>')
-        .html('Lorem,laboriosam quibusdam saepe eaque rem ipsa veniam hic nesciunt dolorum? Esse, perferendis quam! Quos, repellat at! Excepturi sunt itaque blanditiis porro!');
+    var $container = $('#container');
 
-    var container = $('#container');
+    var $row = $('<div>')
+        .addClass('row')
+        .addClass('mainDivIntro');
 
-    container.append(info);
+    var $first = $('<div>')
+        .addClass('intro')
+        .addClass('col-sm-2')
+        .html('Want to travel?');
+
+    var $second = $('<div>')
+        .addClass('intro')
+        .addClass('col-sm-2')
+        .html(`Don't know where?`);
+
+    var $third = $('<div>')
+        .addClass('intro')
+        .addClass('col-sm-2')
+        .html('We help you to choose!');
+
+
+    $row.append($first);
+    $row.append($('<p>')
+        .addClass('triangle').addClass('col-sm-2'));
+
+    $row.append($second);
+    $row.append($('<p>')
+        .addClass('triangle').addClass('col-sm-2'));
+
+    $row.append($third);
+
+    $container.append($row);
+    $('.intro').css('color', 'white');
 })());
