@@ -12,6 +12,7 @@ var layout = {
         weight: 900
       },
      yaxis: {
+        autorange: true, 
          showgrid: false
      },
      margin: {
@@ -118,6 +119,7 @@ $( "#form-data-submit" ).on('click', function( event ) {
        //alert(dataPlaces[index].City)
        gd.data[0].x = monthNames;
        gd.data[0].y = dataAverageTemp;
+       layout.yaxis.autorange = true;
        layout.title ='Average monthly temperature in '  + dataPlaces[index].City;
        Plotly.redraw(gd, layout)
 
