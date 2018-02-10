@@ -15,7 +15,7 @@ var layout = {
          showgrid: false
      },
      margin: {
-         l: 20,
+         l: 50,
          r: 0,
          b: 30,
          t: 30,
@@ -62,15 +62,16 @@ window.onresize = function() {
 
 
 $( "#form-data-submit" ).on('click', function( event ) {
-    dataAverageTemp = [];
-        var place = $('#destination-input').val();
+    
+        dataAverageTemp = [];
+
+        var place = $('#destination-input').val().toLowerCase();
+        //alert(place)
         var date = new Date($('#date-input').val());
         day = date.getDate();
         month = date.getMonth() + 1;
         year = date.getFullYear();
-        //alert([month, year].join('/'));
-        
-       // console.log(day)
+
         event.preventDefault();
         
     //var dataPage = "List_of_cities_by_temperature";
@@ -102,24 +103,22 @@ $( "#form-data-submit" ).on('click', function( event ) {
             },
             type: 'GET'
         });
-        console.log(place)
-       //alert(dataPlaces[0])
-       //for(var index = 0; index<dataPlaces.length; index++) {
+       
         for(var index = 0; index<dataPlaces.length; index++) {
-            //console.log( dataPlaces[index].City === place )
-           if(place.trim().length>0 && dataPlaces[index].City === place) {
+            
+           if(place.trim().length>0 && dataPlaces[index].City.toLowerCase() === place) {
                for(var monthIndex = 0; monthIndex<monthNames.length; monthIndex++) {
                     dataAverageTemp.push(dataPlaces[index][monthNames[monthIndex]]);
                }
-
-               console.log(dataPlaces[index][monthNames[month]])
+               
                break;
            }
            //alert("We found not it" + dataPlaces[index].City)
        }
+       //alert(dataPlaces[index].City)
        gd.data[0].x = monthNames;
        gd.data[0].y = dataAverageTemp;
-       layout.title ='Average monthly temperature in '  + place;
+       layout.title ='Average monthly temperature in '  + dataPlaces[index].City;
        Plotly.redraw(gd, layout)
 
 });

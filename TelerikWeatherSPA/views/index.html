@@ -149,7 +149,9 @@
                                                 <span class="input-group-addon">
                                                         <i class="glyphicon glyphicon-calendar"></i>
                                                     </span>
-                                                <input type="month" id="date-input"  name = "date-input" class="form-control" />
+                                                    <input placeholder="Your Date" class="form-control" type="text" onfocus="(this.type='month')" onblur="(this.type='text')" type="month" id="date-input"  name = "date-input">
+                                                    
+                                                <!-- <input type="month" id="date-input"  name = "date-input" class="form-control" /> -->
                                             </div> 
                                         </div>
                                         <button type='button' form="form-data" id = "form-data-submit" value="Submit">Submit</button>
