@@ -8,9 +8,7 @@
 
 .index {
     width: 100%;
-    background: #a7b1b6;
 }
-
 
 /* Navbar */
 
@@ -83,8 +81,8 @@ ol {
         text-align: center;
         padding-top: 290px;
     }
-    .col-sm-6,
-    .col-sm-offset-3,
+    .log-in .col-sm-6,
+    .log-in .col-sm-offset-3,
     .log-in {
         padding-top: 190px;
     }
@@ -138,8 +136,7 @@ ol {
 }
 
 #about-part,
-#footer,
-#partOne {
+#footer {
     /* height: 50vh; */
     width: 100%;
     padding: 10px 20px;
@@ -220,9 +217,9 @@ h1 {
     margin-bottom: 0px !important;
 }
 
-.row {
+/* .row {
     margin-left: 0px !important;
-}
+} */
 
 .h1,
 .h2,
