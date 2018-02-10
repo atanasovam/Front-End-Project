@@ -18,7 +18,7 @@ $(document).ready((function () {
     var $third = $('<div>')
         .addClass('intro')
         .addClass('col-sm-2')
-        .html('We help you to choose!');
+        .html('We help you choose!');
 
 
     $row.append($first);
