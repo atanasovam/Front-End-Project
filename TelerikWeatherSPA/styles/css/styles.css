@@ -33,7 +33,6 @@
 }
 
 .sticky-top {
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -41,9 +40,9 @@
 
 /* Body */
 
-body {
+/* body {
     position: absolute;
-}
+} */
 
 body::after {
     pointer-events: none;
@@ -67,14 +66,12 @@ body::after {
 
 .hidden {
     display: none;
-    /* !important; */
 }
 
 ul,
 ol {
     list-style-type: none;
 }
-
 
 /* Profile page */
 
@@ -103,7 +100,7 @@ ol {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1400px) {
+@media only screen and (min-width: 768px) and (max-width: 140000px) {
     #navbar img {
         width: 70%;
      }
