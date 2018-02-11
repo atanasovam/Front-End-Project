@@ -45,10 +45,10 @@ jQuery(document).ready(function($) {
 
                 window.open("./admin.html");
 
-                alert('admin');
+                // alert('admin');
             } else if (isValidUser) {
                 showProfilePage();
-
+                // alert('valid')
                 $('#email').val('');
                 $('#password').val('');
 

@@ -50,7 +50,7 @@ var openDB = (function (name) {
     }
 
     function databaseError(e) {
-        alert("Couldn't open file")
+        // alert("Couldn't open file")
     }
     return {
         loadData: db,
