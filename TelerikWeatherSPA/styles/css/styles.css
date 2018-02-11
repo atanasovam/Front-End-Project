@@ -142,10 +142,22 @@ ol {
     height: auto;
 }
 
-#about-part,
+#about-part{
+    width: 100%;
+    padding: 10px 20px;
+    min-height: 40vh;
+    text-align: center;
+    text-align:justify;
+    font-size:125%;
+}
+
+
 #footer {
     width: 100%;
     padding: 10px 20px;
+    min-height: 30vh;
+    text-align: center;
+    
 }
 
 #container,
