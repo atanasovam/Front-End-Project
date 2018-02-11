@@ -6,7 +6,7 @@ var layout = {
     
      title: 'Average Temperature',
      font: {
-        family: 'Courier New',
+        family:'Helvetica serif', 
         size: 15,
         color: 'white', 
         weight: 900

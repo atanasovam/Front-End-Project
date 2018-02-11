@@ -133,11 +133,15 @@
     margin:1%;
     width:20%;
     color: white;
-    font-family: 'Courier New';
+    font-family: 'Helvetica', sans-serif ;
+    /* font-weight: 100 !important; */
     font-size:15;
     padding-right: 0;
     padding-left: 0;
 
+}
+#form-panel label{ 
+    font-weight: 100 !important;
 }
 #data-info-panel{
     box-shadow: inset 0 0 20px 1000px rgba(0,0,0,.3);
