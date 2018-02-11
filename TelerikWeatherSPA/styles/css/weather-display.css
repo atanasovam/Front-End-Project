@@ -77,8 +77,79 @@
 
 
 #data-part {
-    height: 40vh; 
+    height:60vh;   
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgb(1, 104, 145), rgb(16, 152, 204));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgb(1, 104, 145), rgb(16, 152, 204)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    /* background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
 } 
+
+#data-row {
+    overflow: hidden;
+    padding:2%;
+    padding-right: 0;
+    height: 60vh;
+    margin-left: 0;
+}
+
+.panel-default {
+    background-color:transparent !important;
+    border: none !important;
+
+}
+.panel-default>.panel-heading {
+    background-color: rgb(1, 168, 210) !important;
+    width: 100%  !important;
+}
+
+.panel-heading {
+    /* background-color:transparent !important; */
+    /* color: red; */
+    
+   
+}
+
+#data-panel {
+    box-shadow: inset 0 0 20px 1000px rgba(0,0,0,.3);
+    /* padding: 10px; */
+    height: 100%;
+    margin:1%;
+    width:50%;
+    padding-right: 0;
+    padding-left: 0;
+
+}
+
 #data-plot {
     height: 100%;
+    width: 100%;
+   
 }
+#form-panel { 
+    box-shadow: inset 0 0 20px 1000px rgba(0,0,0,.3);
+   
+    height: 100%;
+    margin:1%;
+    width:20%;
+    color: white;
+    font-family: 'Courier New';
+    font-size:15;
+    padding-right: 0;
+    padding-left: 0;
+
+}
+#data-info-panel{
+    box-shadow: inset 0 0 20px 1000px rgba(0,0,0,.3);
+    height: 100%;
+    margin:1%;
+    width:20%;
+    padding-right: 0;
+    padding-left: 0;
+
+    
+}
+#form-data {
+    padding:10%;
+}
+

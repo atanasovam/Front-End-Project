@@ -8,7 +8,7 @@ var layout = {
      font: {
         family: 'Courier New',
         size: 15,
-        color: 'black', 
+        color: 'white', 
         weight: 900
       },
      yaxis: {

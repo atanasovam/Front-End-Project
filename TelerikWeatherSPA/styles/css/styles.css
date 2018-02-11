@@ -58,9 +58,7 @@ ol {
 .select-profile-choises {
     padding-top: 5px;
 }
-#form-data {
-    padding:10%;
-}
+
 
 @media only screen and (min-width: 768px) and (max-width: 140000px) {
     #navbar img {
@@ -239,7 +237,9 @@ ol {
     }
     
     #data-part {
-        height: 30vh;
+        float: left;
+        height: auto;
+        /* height: 0vh; */
     }
 }
 
