@@ -121,37 +121,65 @@
         <div id="partTwo" class="align-items-center hidden">
         </div>
         <div id="data-part" class="align-items-center">
-                        
-                                <div class="col-sm-6 col-xs-12" id = "data-plot"></div>
-                                <div class="col-sm-3 col-sm-offset-3 col-xs-12">
+            <div class="row" id = "data-row">
+                <div class="col-sm-6 col-xs-12" id = "data-panel">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+    
+                        </div>
+                        <div class="panel-body" id = "data-plot">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3  col-xs-12" id = "data-info-panel">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                                
+                        </div>
+                        <div class="panel-body" >
 
-                                    <form id="form-data">                        
-                                        <div class="form-group">
-                                            <label for="destination-input">Choose your destination or find it on the map</label> <br>
-                                            <div class="input-group">
-                                                
-                                                <span class="input-group-addon">
-                                                    <i class="glyphicon glyphicon-search"></i>
-                                                </span>
-                                                
-                                                <input type="text" id="destination-input"  name = "destination" class="form-control" placeholder="Search"/>
-                                            </div> 
-                                            <label for="date-input">When do you want to travel? </label><br>
-                                            <div class="input-group">
-                                            
-                                                <span class="input-group-addon">
-                                                        <i class="glyphicon glyphicon-calendar"></i>
-                                                    </span>
-                                                    <input placeholder="Your Date" class="form-control" type="text" onfocus="(this.type='month')" onblur="(this.type='text')" type="month" id="date-input"  name = "date-input">
-                                                    
-                                                <!-- <input type="month" id="date-input"  name = "date-input" class="form-control" /> -->
-                                            </div> 
-                                        </div>
-                                        <button type='button' form="form-data" id = "form-data-submit" value="Submit">Submit</button>
-                                    </form>
-                                   
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3  col-xs-12" id = "form-panel">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                                
+                        </div>
+                        <div class="panel-body" >
+                            <form id="form-data">                        
+                                <div class="form-group">
+                                    <label for="destination-input">Choose your destination or find it on the map</label> <br>
+                                     <div class="input-group">  
+                                         <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </span>
+                                                        
+                                        <input type="text" id="destination-input"  name = "destination" class="form-control" placeholder="Search"/>
+                                    </div> 
+                                    <label for="date-input">When do you want to travel? </label><br>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                            <input placeholder="Your Date" class="form-control" type="text" onfocus="(this.type='month')" onblur="(this.type='text')" type="month" id="date-input"  name = "date-input">
+                                        </div> 
                                 </div>
+                                <button type='button' form="form-data" id = "form-data-submit" value="Submit">Submit</button>
+                            </form>
+             
+                        </div>
+                    </div>
+                </div>
+                               
+                               
+            </div>
         </div>
+      
+                               
+    
+            </div>
         <div id="about-part"> </div>
 
         <div id="footer"> </div>
