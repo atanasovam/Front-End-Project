@@ -214,6 +214,8 @@
    /*  */
    #data-part {
        height: auto;
+       width: 100%;
+    
    }
    #data-row{
     height: auto;
