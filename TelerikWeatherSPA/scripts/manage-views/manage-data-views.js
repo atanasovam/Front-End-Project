@@ -1,6 +1,7 @@
 var dataPlaces; 
 var dataAverageTemp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var monthNamesFull = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var d3 = Plotly.d3;
 var layout = {
     
@@ -115,6 +116,10 @@ $( "#form-data-submit" ).on('click', function( event ) {
                break;
            }
            //alert("We found not it" + dataPlaces[index].City)
+       }
+       if(month>0) {
+            $('#data-info').html("The expected temperature for " + dataPlaces[index].City + " in " + monthNamesFull[month-1] + " is " 
+            +  Math.round(Number(dataAverageTemp[month-1])) +  "&deg;C." );
        }
        //alert(dataPlaces[index].City)
        gd.data[0].x = monthNames;
