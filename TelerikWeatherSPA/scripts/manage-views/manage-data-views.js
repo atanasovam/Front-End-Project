@@ -70,7 +70,8 @@ var plotTemp = function() {
     gd.data[0].y = dataAverageTemp;
     layout.yaxis.autorange = true;
     gd.data[0].marker.line.width = 0;
-    gd.data[0].marker.color = "rgb(0,34,102)";
+    // gd.data[0].marker.color = "rgb(0,34,102)";
+    gd.data[0].marker.color =  "#2A3E59"
     layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
     Plotly.redraw(gd, layout)
 
