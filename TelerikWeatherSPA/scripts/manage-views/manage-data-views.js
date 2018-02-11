@@ -174,7 +174,7 @@ $( "#form-data-submit" ).on('click', function( event ) {
        }
        if(month>0) {
         $('#sun-text').html( "If you go to " + dataPlacesSunshine[indexSun].City  +" in " + monthNamesFull[month-1] +
-         " you'll get around " +  Math.round(Number(dataAverageSunshine[month-1])/31) +  " hours of sunlight." );
+         " you'll get around " +  Math.round(Number(dataAverageSunshine[month-1])/31) +  " hours of sunlight per day." );
         }
        
         if($('#select-data').val() ==="temp") {

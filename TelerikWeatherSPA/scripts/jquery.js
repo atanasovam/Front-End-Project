@@ -6,5 +6,31 @@ jQuery(document).ready(function ($) {
 
     $('.profile-page').addClass('hidden');
     $('.log-in').addClass('hidden');
-   $("#admin").addClass('hidden');
+    $("#admin").addClass('hidden');
+    $("#navBarOne").click(function (event) {
+        event.preventDefault();
+        $(".navbar-button").css("background", 'white');
+        $("#navBarOne").css("background", 'whitesmoke');
+    }); 
+    $("#navBarTwo").click(function (event) {
+        event.preventDefault();
+        $(".navbar-button").css("background", 'white');
+        $("#navBarTwo").css("background", 'whitesmoke');
+    }); 
+    $("#navBarThree").click(function (event) {
+        event.preventDefault();
+        $(".navbar-button").css("background", 'white');
+        $("#navBarThree").css("background", 'whitesmoke');
+    }); 
+    $("#navBarFour").click(function (event) {
+        event.preventDefault();
+        $(".navbar-button").css("background", 'white');
+        $("#navBarFour").css("background", 'whitesmoke');
+    }); 
+    $(".navbar-logo").click(function (event) {
+        event.preventDefault();
+        $(".navbar-button").css("background", 'white');
+        
+    }); 
+
 });

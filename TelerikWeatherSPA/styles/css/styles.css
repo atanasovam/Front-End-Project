@@ -7,6 +7,9 @@
 }
 
 /* Navbar */
+.navbar-button {
+    height: 5vh;
+}
 .sticky {
     position: fixed;
     z-index: 999;
@@ -20,8 +23,10 @@
     font-size: 140%;
     font-weight: 100;
     background: white;
+    text-align: bottom;
     /* background:  whitesmoke; */
-    padding: 10px 0px 10px 0px;
+    /* padding: 10px 0px 10px 0px; */
+    padding: 0px 0px 0px 0px !important; 
 }
 
 #navbar a {
@@ -241,6 +246,9 @@ ol {
     
 }
 @media only screen and (min-width: 1px) and (max-width: 767px) {
+    .navbar-button {
+        height: auto;
+    }
     #city-info  {
         height: auto;
         max-height: 25vh;
