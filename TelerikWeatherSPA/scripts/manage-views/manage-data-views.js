@@ -1,4 +1,6 @@
 var dataPlaces; 
+var indexCityTemp;
+var indexCitySun;
 var dataPlacesSunshine;
 var dataAverageTemp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var dataAverageSunshine = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -66,7 +68,8 @@ window.onresize = function() {
 
 
 $( "#form-data-submit" ).on('click', function( event ) {
-    
+        indexCityTemp = 0;
+        indexCitySun = 0;   
         dataAverageTemp = [];
         dataAverageSunshine = [];
         var place = $('#destination-input').val().toLowerCase();
@@ -128,32 +131,73 @@ $( "#form-data-submit" ).on('click', function( event ) {
                for(var monthIndex = 0; monthIndex<monthNames.length; monthIndex++) {
                     dataAverageTemp.push(dataPlaces[index][monthNames[monthIndex]]);
                }
-               
+               indexCityTemp = index;
                break;
+            
            }
            //alert("We found not it" + dataPlaces[index].City)
         }
           
-    //    for(var indexSun = 0; indexSun<dataPlacesSunshine.length;  indexSun++) {
+       for(var indexSun = 0; indexSun<dataPlacesSunshine.length;  indexSun++) {
         
-    //         if(place.trim().length>0 && dataPlaces[index].City.toLowerCase() === place) {
-    //             for(var monthIndex = 0; monthIndex<monthNames.length; monthIndex++) {
-    //                     dataAverageTemp.push(dataPlaces[index][monthNames[monthIndex]]);
-    //             }
-                
-    //             break;
-    //         }
-    //    //alert("We found not it" + dataPlaces[index].City)
-    //     }
+            if(place.trim().length>0 && dataPlacesSunshine[indexSun].City.toLowerCase() === place) {
+                for(var monthIndex = 0; monthIndex<monthNames.length; monthIndex++) {
+                        dataAverageSunshine.push(dataPlacesSunshine[indexSun][monthNames[monthIndex]]);
+                }
+                indexCitySun = indexSun;
+                break;
+            }
+       //alert("We found not it" + dataPlaces[index].City)
+        }
        if(month>0) {
             $('#data-info').html("The expected temperature for " + dataPlaces[index].City + " in " + monthNamesFull[month-1] + " is " 
             +  Math.round(Number(dataAverageTemp[month-1])) +  "&deg;C." );
        }
-       //alert(dataPlaces[index].City)
-       gd.data[0].x = monthNames;
-       gd.data[0].y = dataAverageTemp;
-       layout.yaxis.autorange = true;
-       layout.title ='Average monthly temperature in '  + dataPlaces[index].City;
-       Plotly.redraw(gd, layout)
+       
+        if($('#select-data').val() ==="temp") {
+            //alert(dataPlaces[index].City)
+        gd.data[0].x = monthNames;
+        gd.data[0].y = dataAverageTemp;
+        layout.yaxis.autorange = true;
+        gd.data[0].marker.color = "rgb(0,34,102)";
+        layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
+        Plotly.redraw(gd, layout)
 
+        } 
+        if($('#select-data').val() ==="sun") {
+            gd.data[0].x = monthNames;
+            gd.data[0].y = dataAverageSunshine;
+            layout.yaxis.autorange = true;
+            gd.data[0].marker.color = "rgb(255,194,102)";
+            layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
+            Plotly.redraw(gd, layout)
+        } 
+      
+
+});
+// $( "#select-data" ).select(function() {
+//     alert( "Handler for .select() called." );
+//   });
+$(document).ready(function() {
+    // console.log("SDFGH")
+    $('#select-data').on('change', function() {
+        if($('#select-data').val() ==="temp") {
+            //alert(dataPlaces[index].City)
+        gd.data[0].x = monthNames;
+        gd.data[0].y = dataAverageTemp;
+        layout.yaxis.autorange = true;
+        gd.data[0].marker.color = "rgb(0,34,102)";
+        layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
+        Plotly.redraw(gd, layout)
+
+        } 
+        if($('#select-data').val() ==="sun") {
+            gd.data[0].x = monthNames;
+            gd.data[0].y = dataAverageSunshine;
+            gd.data[0].marker.color = "rgb(255,194,102)";
+            layout.yaxis.autorange = true;
+            layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
+            Plotly.redraw(gd, layout)
+        } 
+      })
 });
