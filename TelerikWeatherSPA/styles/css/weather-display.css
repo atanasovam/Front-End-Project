@@ -163,11 +163,12 @@
     width: 130px;
     height: 65px;
     margin: 15px auto;
-    margin-top: 10%;
+    margin-top: 30%;
     /* color: #4274D3; */
     color:white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-size: 1.15rem;
+    font-weight: 100;
     line-height: 65px;
     text-transform: uppercase;
     text-align: center;
@@ -207,3 +208,25 @@
     -ms-transition: all 0.8s ease-in-out;
     -o-transition: all 0.8s ease-in-out;
   }
+#destination-input {
+    
+    background: white;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    /* color: #fff; */
+    padding-left: 15px;
+}
+
+#date-input {
+    
+    background: white;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    /* color: #fff; */
+    padding-left: 15px;
+}
+.glyphicon {
+    border:none;
+}
