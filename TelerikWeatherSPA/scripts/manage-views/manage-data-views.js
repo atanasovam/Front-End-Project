@@ -176,31 +176,19 @@ $( "#form-data-submit" ).on('click', function( event ) {
         if($('#select-data').val() ==="temp") {
             //alert(dataPlaces[index].City)
             plotTemp();
-        // gd.data[0].x = monthNames;
-        // gd.data[0].y = dataAverageTemp;
-        // layout.yaxis.autorange = true;
-        // gd.data[0].marker.color = "rgb(0,34,102)";
-        // layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
-        // Plotly.redraw(gd, layout)
+
 
         } 
         if($('#select-data').val() ==="sun") {
             plotSun();
-            // gd.data[0].x = monthNames;
-            // gd.data[0].y = dataAverageSunshine;
-            // layout.yaxis.autorange = true;
-            // gd.data[0].marker.color = "rgb(255,194,102)";
-            // layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
-            // Plotly.redraw(gd, layout)
+
         } 
       
 
 });
-// $( "#select-data" ).select(function() {
-//     alert( "Handler for .select() called." );
-//   });
+
 $(document).ready(function() {
-    // console.log("SDFGH")
+
     $('#select-data').on('change', function() {
         if($('#select-data').val() ==="temp") {
 
@@ -210,12 +198,7 @@ $(document).ready(function() {
         } 
         if($('#select-data').val() ==="sun") {
             plotSun();
-            // gd.data[0].x = monthNames;
-            // gd.data[0].y = dataAverageSunshine;
-            // gd.data[0].marker.color = "rgb(255,194,102)";
-            // layout.yaxis.autorange = true;
-            // layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
-            // Plotly.redraw(gd, layout)
+
         } 
       })
 });
