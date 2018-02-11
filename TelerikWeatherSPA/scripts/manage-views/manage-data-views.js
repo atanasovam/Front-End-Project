@@ -169,9 +169,13 @@ $( "#form-data-submit" ).on('click', function( event ) {
        //alert("We found not it" + dataPlaces[index].City)
         }
        if(month>0) {
-            $('#data-info').html("The expected temperature for " + dataPlaces[index].City + " in " + monthNamesFull[month-1] + " is " 
+            $('#temp-text').html("The expected average temperature for " + dataPlaces[index].City + " in " + monthNamesFull[month-1] + " is " 
             +  Math.round(Number(dataAverageTemp[month-1])) +  "&deg;C." );
        }
+       if(month>0) {
+        $('#sun-text').html( "The expected amount of sunny hours you'll get per day is roughly "
+        +  Math.round(Number(dataAverageSunshine[month-1])/31) +  " hours." );
+        }
        
         if($('#select-data').val() ==="temp") {
             //alert(dataPlaces[index].City)
