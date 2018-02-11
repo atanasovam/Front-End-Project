@@ -173,8 +173,8 @@ $( "#form-data-submit" ).on('click', function( event ) {
             +  Math.round(Number(dataAverageTemp[month-1])) +  "&deg;C." );
        }
        if(month>0) {
-        $('#sun-text').html( "The expected amount of sunny hours you'll get per day is roughly "
-        +  Math.round(Number(dataAverageSunshine[month-1])/31) +  " hours." );
+        $('#sun-text').html( "If you go to " + dataPlacesSunshine[indexSun].City  +" in " + monthNamesFull[month-1] +
+         " you'll get around " +  Math.round(Number(dataAverageSunshine[month-1])/31) +  " hours of sunlight." );
         }
        
         if($('#select-data').val() ==="temp") {
