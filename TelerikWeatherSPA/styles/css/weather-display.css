@@ -34,6 +34,7 @@
     }
     #weather-live {
         height: auto;
+        max-height: 50vh;
         padding-bottom: 15px; 
     }
     #weather-box {
