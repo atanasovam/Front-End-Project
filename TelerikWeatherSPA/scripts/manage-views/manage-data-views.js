@@ -63,13 +63,32 @@ Plotly.plot(gd, [{
 window.onresize = function() {
     Plotly.Plots.resize(gd);
 };
-    
 
+
+var plotTemp = function() {
+    gd.data[0].x = monthNames;
+    gd.data[0].y = dataAverageTemp;
+    layout.yaxis.autorange = true;
+    gd.data[0].marker.line.width = 0;
+    gd.data[0].marker.color = "rgb(0,34,102)";
+    layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
+    Plotly.redraw(gd, layout)
+
+}
+var plotSun = function() {
+    gd.data[0].x = monthNames;
+    gd.data[0].y = dataAverageSunshine;
+    gd.data[0].marker.line.width = 0;
+    gd.data[0].marker.color = "rgb(255,194,102)";
+    layout.yaxis.autorange = true;
+    layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
+    Plotly.redraw(gd, layout)
+}
 
 
 $( "#form-data-submit" ).on('click', function( event ) {
-        indexCityTemp = 0;
-        indexCitySun = 0;   
+        //indexCityTemp = 0;
+        //indexCitySun = 0;   
         dataAverageTemp = [];
         dataAverageSunshine = [];
         var place = $('#destination-input').val().toLowerCase();
@@ -156,21 +175,23 @@ $( "#form-data-submit" ).on('click', function( event ) {
        
         if($('#select-data').val() ==="temp") {
             //alert(dataPlaces[index].City)
-        gd.data[0].x = monthNames;
-        gd.data[0].y = dataAverageTemp;
-        layout.yaxis.autorange = true;
-        gd.data[0].marker.color = "rgb(0,34,102)";
-        layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
-        Plotly.redraw(gd, layout)
+            plotTemp();
+        // gd.data[0].x = monthNames;
+        // gd.data[0].y = dataAverageTemp;
+        // layout.yaxis.autorange = true;
+        // gd.data[0].marker.color = "rgb(0,34,102)";
+        // layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
+        // Plotly.redraw(gd, layout)
 
         } 
         if($('#select-data').val() ==="sun") {
-            gd.data[0].x = monthNames;
-            gd.data[0].y = dataAverageSunshine;
-            layout.yaxis.autorange = true;
-            gd.data[0].marker.color = "rgb(255,194,102)";
-            layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
-            Plotly.redraw(gd, layout)
+            plotSun();
+            // gd.data[0].x = monthNames;
+            // gd.data[0].y = dataAverageSunshine;
+            // layout.yaxis.autorange = true;
+            // gd.data[0].marker.color = "rgb(255,194,102)";
+            // layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
+            // Plotly.redraw(gd, layout)
         } 
       
 
@@ -182,22 +203,19 @@ $(document).ready(function() {
     // console.log("SDFGH")
     $('#select-data').on('change', function() {
         if($('#select-data').val() ==="temp") {
-            //alert(dataPlaces[index].City)
-        gd.data[0].x = monthNames;
-        gd.data[0].y = dataAverageTemp;
-        layout.yaxis.autorange = true;
-        gd.data[0].marker.color = "rgb(0,34,102)";
-        layout.title ='Average monthly temperature in '  + dataPlaces[indexCityTemp].City;
-        Plotly.redraw(gd, layout)
+
+            plotTemp();
+   
 
         } 
         if($('#select-data').val() ==="sun") {
-            gd.data[0].x = monthNames;
-            gd.data[0].y = dataAverageSunshine;
-            gd.data[0].marker.color = "rgb(255,194,102)";
-            layout.yaxis.autorange = true;
-            layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
-            Plotly.redraw(gd, layout)
+            plotSun();
+            // gd.data[0].x = monthNames;
+            // gd.data[0].y = dataAverageSunshine;
+            // gd.data[0].marker.color = "rgb(255,194,102)";
+            // layout.yaxis.autorange = true;
+            // layout.title ='Average monthly number of sunshine hours in '  + dataPlacesSunshine[indexCitySun].City;
+            // Plotly.redraw(gd, layout)
         } 
       })
 });
