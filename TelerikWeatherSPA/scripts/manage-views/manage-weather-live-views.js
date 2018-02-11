@@ -6,7 +6,9 @@ jQuery(document).ready(function ($) {
                 .append($("<p/>").addClass("hour"))
                 .append($("<p/>").addClass("date")))
         .append($("<div>").addClass("col-xs-6 right").attr("id", "icon")
-            .append($("<img/>").addClass("max-width-100-height-auto"))))
+            .append($("<img/>").addClass("max-width-100-height-auto")
+            .css('margin', '3%'))
+           ))
         .append($("<div>").attr("id", "city-name"))
         .append($("<div>").attr("id", "city-tempC"))
         .append($("<div>").addClass("right").attr("id", "weather"));
@@ -23,7 +25,8 @@ var showCurrentWeather = (function (city, jsonWeather) {
     //var thatDay = new Date().toJSON().slice(0, 10).replace(/-/g, '.');
     var months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
     var now = new Date();
-    var thatDay = now.getDay() + " " + months[now.getMonth()];
+    var today = now.getDate();
+    var thatDay = today + " " + months[now.getMonth()];
     var minutes = now.getMinutes();
     if (minutes.toString().length === 1) {
         minutes = "0" + minutes;
@@ -37,6 +40,7 @@ var showCurrentWeather = (function (city, jsonWeather) {
     $("#icon img").attr("src", iconUrl);
 
     var weatherBox = $("#weather-box");
+    // weatherBox.css('padding', '3%')
     if (Number.parseInt(weatherBox.height()) > 500) {
         weatherBox.css("fontSize", "90%");
     } else {
