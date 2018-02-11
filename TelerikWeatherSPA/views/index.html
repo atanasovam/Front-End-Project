@@ -138,7 +138,7 @@
                         </div>
                         <div class="panel-body" >
 
-                            
+
                         </div>
                     </div>
                 </div>
@@ -166,9 +166,16 @@
                                             <input placeholder="Your Date" class="form-control" type="text" onfocus="(this.type='month')" onblur="(this.type='text')" type="month" id="date-input"  name = "date-input">
                                         </div> 
                                 </div>
-                                <button type='button' form="form-data" id = "form-data-submit" value="Submit">Submit</button>
-                            </form>
-             
+                                <!-- <button type='button' form="form-data" id = "form-data-submit" value="Submit">Submit</button> -->
+                            <!-- button style is taken from 
+                            https://freebiesupply.com/blog/css-button-hover-effects/ -->
+                            <div id = "form-data-submit" class="basicBox" style="cursor: pointer;">
+                                Submit
+                                <svg width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x='0' y='0' fill='none' width='130' height='65'/>
+                                </svg>
+                            </div>
+                        </form>
                         </div>
                     </div>
                 </div>
