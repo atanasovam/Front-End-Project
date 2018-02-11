@@ -1,5 +1,7 @@
 var dataPlaces; 
+var dataPlacesSunshine;
 var dataAverageTemp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var dataAverageSunshine = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var monthNamesFull = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var d3 = Plotly.d3;
@@ -66,7 +68,7 @@ window.onresize = function() {
 $( "#form-data-submit" ).on('click', function( event ) {
     
         dataAverageTemp = [];
-
+        dataAverageSunshine = [];
         var place = $('#destination-input').val().toLowerCase();
         //alert(place)
         var date = new Date($('#date-input').val());
@@ -105,6 +107,20 @@ $( "#form-data-submit" ).on('click', function( event ) {
             },
             type: 'GET'
         });
+        var name = "cities-sunshine";
+        $.ajax({
+            url: '../data/data-statistical/' + name + '.json',
+            dataType: "JSON",
+            async: false,
+            error: function () {
+               alert("problem")
+            },
+            success: function (data) {
+                dataPlacesSunshine = data;
+            },
+            type: 'GET'
+        });
+       
        
         for(var index = 0; index<dataPlaces.length; index++) {
             
@@ -116,7 +132,19 @@ $( "#form-data-submit" ).on('click', function( event ) {
                break;
            }
            //alert("We found not it" + dataPlaces[index].City)
-       }
+        }
+          
+    //    for(var indexSun = 0; indexSun<dataPlacesSunshine.length;  indexSun++) {
+        
+    //         if(place.trim().length>0 && dataPlaces[index].City.toLowerCase() === place) {
+    //             for(var monthIndex = 0; monthIndex<monthNames.length; monthIndex++) {
+    //                     dataAverageTemp.push(dataPlaces[index][monthNames[monthIndex]]);
+    //             }
+                
+    //             break;
+    //         }
+    //    //alert("We found not it" + dataPlaces[index].City)
+    //     }
        if(month>0) {
             $('#data-info').html("The expected temperature for " + dataPlaces[index].City + " in " + monthNamesFull[month-1] + " is " 
             +  Math.round(Number(dataAverageTemp[month-1])) +  "&deg;C." );
